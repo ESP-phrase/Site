@@ -52,11 +52,13 @@ export default function ContactForm() {
     setLoading(true);
     setError("");
 
+    const conversionId = `lead-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+
     try {
       const res = await fetch("/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, conversionId }),
       });
 
       const data = await res.json();
@@ -68,8 +70,7 @@ export default function ContactForm() {
 
       setSubmitted(true);
 
-      // Reddit conversion event
-      const conversionId = `lead-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+      // Reddit pixel — same conversionId as CAPI event for deduplication
       if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).rdt) {
         (window as unknown as { rdt: (event: string, type: string, data: Record<string, string>) => void }).rdt("track", "Lead", { conversionId });
       }

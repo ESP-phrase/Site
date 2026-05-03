@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(apiKey);
   try {
     const body = await req.json();
-    const { name, email, storeUrl, issueType, description } = body;
+    const { name, email, storeUrl, issueType, description, conversionId } = body;
 
     if (!name || !email || !storeUrl || !issueType || !description) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -69,7 +69,6 @@ export async function POST(req: NextRequest) {
     const redditToken = process.env.REDDIT_ACCESS_TOKEN;
     if (redditToken) {
       try {
-        const conversionId = `lead-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
         const ipAddress =
           req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
           req.headers.get("x-real-ip") ??
