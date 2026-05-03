@@ -10,8 +10,8 @@ const badges = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#0f2d5e] min-h-[calc(100vh-2rem)] flex items-center overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+    <section className="relative bg-[#0f2d5e] h-screen flex items-center overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
           {/* Left — copy */}

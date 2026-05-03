@@ -1,4 +1,3 @@
-import ActivityTicker from "./components/activity-ticker";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import TrustedBy from "./components/trusted-by";
@@ -17,7 +16,6 @@ import StickyCta from "./components/sticky-cta";
 export default function Home() {
   return (
     <>
-      <ActivityTicker />
       <Navbar />
       <main>
         <Hero />

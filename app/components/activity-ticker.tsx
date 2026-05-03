@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 const messages = [
   "4 stores being fixed right now",
   "Last fix completed 18 min ago",
-  "2 experts available now — fast response",
   "Store down? Get help in minutes →",
 ];
 
