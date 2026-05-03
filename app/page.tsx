@@ -11,7 +11,6 @@ import ContactForm from "./components/contact-form";
 import Newsletter from "./components/newsletter";
 import Footer from "./components/footer";
 import WhatsAppButton from "./components/whatsapp-button";
-import StickyCta from "./components/sticky-cta";
 
 export default function Home() {
   return (
@@ -31,7 +30,6 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
-      <StickyCta />
     </>
   );
 }
