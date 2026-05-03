@@ -8,7 +8,7 @@ const testimonials = [
     role: "Founder, RunGear Co.",
     rating: 5,
     tag: "Checkout Fix",
-    avatar: "https://api.dicebear.com/9.x/personas/svg?seed=Marcus&backgroundColor=0f2d5e&hair=shortHair&body=shirt",
+    avatar: "https://i.pravatar.cc/100?img=11",
   },
   {
     quote:
@@ -17,7 +17,7 @@ const testimonials = [
     role: "CEO, LuxeHome Decor",
     rating: 5,
     tag: "App Conflict",
-    avatar: "https://api.dicebear.com/9.x/personas/svg?seed=Priya&backgroundColor=1a3f7a&skinColor=brown",
+    avatar: "https://i.pravatar.cc/100?img=47",
   },
   {
     quote:
@@ -26,7 +26,7 @@ const testimonials = [
     role: "Store Owner, UrbanKicks",
     rating: 5,
     tag: "Speed Optimization",
-    avatar: "https://api.dicebear.com/9.x/personas/svg?seed=Jake&backgroundColor=0f2d5e&hair=shortHair02",
+    avatar: "https://i.pravatar.cc/100?img=12",
   },
 ];
 

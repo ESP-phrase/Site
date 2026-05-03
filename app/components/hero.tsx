@@ -136,10 +136,13 @@ export default function Hero() {
 
               {/* Floating expert card */}
               <div className="absolute -bottom-5 -left-4 z-20 flex items-center gap-3 px-4 py-3 rounded-2xl bg-[#1e3a5f] border border-white/10 shadow-xl">
-                <div className="w-9 h-9 rounded-full bg-[#2563eb] flex items-center justify-center shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
+                <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 bg-[#2563eb]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://i.pravatar.cc/100?img=11"
+                    alt="Alex"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <div className="text-white text-sm font-bold">Alex — Shopify Expert</div>
