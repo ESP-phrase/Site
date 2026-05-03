@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const testimonials = [
   {
     quote:
@@ -6,14 +8,16 @@ const testimonials = [
     role: "Founder, RunGear Co.",
     rating: 5,
     tag: "Checkout Fix",
+    avatar: "https://api.dicebear.com/9.x/personas/svg?seed=Marcus&backgroundColor=0f2d5e&hair=shortHair&body=shirt",
   },
   {
     quote:
-      "After updating a third-party loyalty app, half our theme stopped rendering. ShopifySOS diagnosed the script conflict in 30 minutes and cleaned everything up perfectly.",
+      "After updating a third-party loyalty app, half our theme stopped rendering. TaskDudes diagnosed the script conflict in 30 minutes and cleaned everything up perfectly.",
     name: "Priya M.",
     role: "CEO, LuxeHome Decor",
     rating: 5,
     tag: "App Conflict",
+    avatar: "https://api.dicebear.com/9.x/personas/svg?seed=Priya&backgroundColor=1a3f7a&skinColor=brown",
   },
   {
     quote:
@@ -22,6 +26,7 @@ const testimonials = [
     role: "Store Owner, UrbanKicks",
     rating: 5,
     tag: "Speed Optimization",
+    avatar: "https://api.dicebear.com/9.x/personas/svg?seed=Jake&backgroundColor=0f2d5e&hair=shortHair02",
   },
 ];
 
@@ -71,10 +76,14 @@ export default function Testimonials() {
               </blockquote>
 
               <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                <div className="w-10 h-10 rounded-full bg-[#0f2d5e] flex items-center justify-center shrink-0">
-                  <span className="text-white font-bold text-sm">
-                    {t.name.charAt(0)}
-                  </span>
+                <div className="w-11 h-11 rounded-full overflow-hidden shrink-0 bg-[#0f2d5e]">
+                  <Image
+                    src={t.avatar}
+                    alt={t.name}
+                    width={44}
+                    height={44}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <div className="text-sm font-bold text-[#0f2d5e]">{t.name}</div>

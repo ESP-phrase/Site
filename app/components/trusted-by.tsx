@@ -1,13 +1,13 @@
 const brands = [
-  "AllBirds", "Gymshark", "MVMT", "Fashion Nova", "Kylie Beauty", "Steve Madden",
-  "Death Wish Coffee", "Chubbies", "Outdoor Voices", "Ridge", "Allbirds", "Beardbrand",
+  "Gymshark", "MVMT", "Fashion Nova", "Kylie Beauty", "Steve Madden",
+  "Death Wish Coffee", "Chubbies", "Outdoor Voices", "Ridge", "Beardbrand", "Allbirds",
 ];
 
 export default function TrustedBy() {
   return (
     <section className="py-12 bg-white border-y border-gray-100 overflow-hidden">
       <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">
-        Trusted by store owners from brands like
+        Store owners from these brands have trusted us
       </p>
 
       <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">

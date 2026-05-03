@@ -10,7 +10,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-8 left-0 right-0 z-40 bg-[#0f2d5e] border-b border-white/10">
+    <header className="fixed top-8 left-0 right-0 z-40 bg-[#0f2d5e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 shrink-0">
@@ -31,10 +31,10 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-6">
             <Link
               href="#contact"
-              className="hidden sm:inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors"
+              className="hidden md:inline-flex items-center gap-1 px-5 py-2 rounded-lg bg-[#2563eb] text-white text-sm font-semibold hover:bg-[#1d4ed8] transition-colors ml-8"
             >
               Get Help Now
             </Link>
