@@ -46,7 +46,9 @@ export default function RootLayout({
         {children}
         <Analytics />
         <Script id="reddit-pixel" strategy="afterInteractive">{`
-          !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_iy0yboxiui0k",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_iy0yboxiui0k');rdt('track','PageVisit');
+          !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_iy0yboxiui0k",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
+          rdt('init','a2_iy0yboxiui0k',{email:'aubreynicholsacc@gmail.com',phoneNumber:'+15127967462'});
+          rdt('track','PageVisit');
         `}</Script>
       </body>
     </html>
