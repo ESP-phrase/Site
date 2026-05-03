@@ -55,7 +55,7 @@ export default function Faq() {
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-[#f0f4ff] transition-colors"
               >
-                <span className="font-bold text-[#0f2d5e] text-sm pr-4">{faq.q}</span>
+                <span className="flex-1 min-w-0 font-bold text-[#0f2d5e] text-sm pr-4 text-left">{faq.q}</span>
                 <svg
                   className={`w-5 h-5 text-[#2563eb] shrink-0 transition-transform duration-200 ${open === i ? "rotate-180" : ""}`}
                   fill="none"

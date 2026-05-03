@@ -34,7 +34,7 @@ export default function StickyCta() {
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <div className="bg-[#0f2d5e] border-t border-white/10 px-4 py-3 flex items-center justify-between gap-4 max-w-full">
+      <div className="bg-[#0f2d5e] border-t border-white/10 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 max-w-full">
         <div className="flex items-center gap-2 min-w-0">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
           <span className="text-white text-sm font-medium truncate">
@@ -51,7 +51,7 @@ export default function StickyCta() {
           <button
             onClick={() => setDismissed(true)}
             aria-label="Dismiss"
-            className="text-white/40 hover:text-white transition-colors p-1"
+            className="text-white/40 hover:text-white transition-colors p-2"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

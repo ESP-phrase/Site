@@ -71,7 +71,7 @@ export default function Pricing() {
               key={plan.name}
               className={`relative rounded-2xl flex flex-col ${
                 plan.featured
-                  ? "bg-[#0f2d5e] text-white shadow-2xl shadow-navy/20 ring-4 ring-[#2563eb]/30 scale-105"
+                  ? "bg-[#0f2d5e] text-white shadow-2xl shadow-navy/20 ring-4 ring-[#2563eb]/30 md:scale-105"
                   : "bg-[#f0f4ff] text-[#0f2d5e]"
               }`}
             >

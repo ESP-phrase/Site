@@ -48,13 +48,13 @@ export default function Stats() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm"
+                className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm"
               >
-                <div className="text-4xl font-black text-white mb-1">{stat.value}</div>
+                <div className="text-3xl sm:text-4xl font-black text-white mb-1">{stat.value}</div>
                 <div className="text-sm font-semibold text-[#3b82f6] mb-1">{stat.label}</div>
                 <div className="text-xs text-white/50">{stat.sub}</div>
               </div>

@@ -1,6 +1,5 @@
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
-import TrustedBy from "./components/trusted-by";
 import Services from "./components/services";
 import HowItWorks from "./components/how-it-works";
 import Pricing from "./components/pricing";
@@ -9,6 +8,7 @@ import Stats from "./components/stats";
 import Testimonials from "./components/testimonials";
 import Faq from "./components/faq";
 import ContactForm from "./components/contact-form";
+import Newsletter from "./components/newsletter";
 import Footer from "./components/footer";
 import WhatsAppButton from "./components/whatsapp-button";
 import StickyCta from "./components/sticky-cta";
@@ -19,7 +19,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <TrustedBy />
         <Services />
         <HowItWorks />
         <Pricing />
@@ -28,6 +27,7 @@ export default function Home() {
         <Testimonials />
         <Faq />
         <ContactForm />
+        <Newsletter />
       </main>
       <Footer />
       <WhatsAppButton />

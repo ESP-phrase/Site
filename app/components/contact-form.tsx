@@ -136,7 +136,7 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div className="bg-[#f0f4ff] rounded-2xl p-8 border border-[#e0e9ff]">
+          <div className="bg-[#f0f4ff] rounded-2xl p-5 sm:p-8 border border-[#e0e9ff]">
             {submitted ? (
               <div className="text-center py-10">
                 <div className="w-16 h-16 rounded-full bg-[#0f2d5e] flex items-center justify-center mx-auto mb-4">
@@ -162,7 +162,7 @@ export default function ContactForm() {
                       placeholder="Jane Smith"
                       value={form.name}
                       onChange={(e) => update("name", e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-base sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
                     />
                   </div>
                   <div>
@@ -175,7 +175,7 @@ export default function ContactForm() {
                       placeholder="jane@mystore.com"
                       value={form.email}
                       onChange={(e) => update("email", e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-base sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
                     />
                   </div>
                 </div>
@@ -190,7 +190,7 @@ export default function ContactForm() {
                     placeholder="https://mystore.myshopify.com"
                     value={form.storeUrl}
                     onChange={(e) => update("storeUrl", e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-base sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
                   />
                 </div>
 
@@ -202,7 +202,7 @@ export default function ContactForm() {
                     required
                     value={form.issueType}
                     onChange={(e) => update("issueType", e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-base sm:text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
                   >
                     <option value="">Select an issue type</option>
                     <option>Checkout Error</option>

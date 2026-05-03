@@ -58,11 +58,13 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-[#e0e9ff] flex flex-col"
+              className={`bg-white rounded-2xl p-8 shadow-sm border border-[#e0e9ff] flex flex-col ${
+                i === 1 ? "md:mt-8" : i === 2 ? "md:mt-4" : ""
+              }`}
             >
               <div className="flex items-center justify-between mb-4">
                 <StarRating count={t.rating} />
