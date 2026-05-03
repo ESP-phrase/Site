@@ -69,6 +69,13 @@ export async function POST(req: NextRequest) {
     const redditToken = process.env.REDDIT_ACCESS_TOKEN;
     if (redditToken) {
       try {
+        const conversionId = `lead-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+        const ipAddress =
+          req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
+          req.headers.get("x-real-ip") ??
+          undefined;
+        const userAgent = req.headers.get("user-agent") ?? undefined;
+
         await fetch("https://ads-api.reddit.com/api/v3/pixels/a2_iy0yboxiui0k/conversion_events", {
           method: "POST",
           headers: {
@@ -84,6 +91,21 @@ export async function POST(req: NextRequest) {
                   click_id: req.headers.get("x-reddit-click-id") ?? undefined,
                   user: {
                     email: email,
+                    ip_address: ipAddress,
+                    user_agent: userAgent,
+                  },
+                  metadata: {
+                    conversion_id: conversionId,
+                    item_count: 1,
+                    currency: "USD",
+                    value: 35,
+                    products: [
+                      {
+                        id: "shopify-fix",
+                        name: issueType,
+                        category: "Shopify Support",
+                      },
+                    ],
                   },
                   type: {
                     tracking_type: "Lead",
