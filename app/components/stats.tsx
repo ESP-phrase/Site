@@ -5,13 +5,13 @@ const stats = [
   { value: "5yr", label: "Shopify Experience", sub: "certified Shopify Partners" },
 ];
 
-const highlights = [
-  "Shopify Partner certified experts",
-  "No overseas outsourcing — direct experts only",
-  "We fix it or you don't pay",
-  "Worked on 2,000+ live stores",
-  "Available 24 hours, 7 days a week",
-  "Transparent pricing, no hidden fees",
+const comparisons = [
+  { them: "Generic freelancers & agencies", us: "Shopify Partner certified experts" },
+  { them: "Overseas outsourcing, slow comms", us: "Direct experts only — no middlemen" },
+  { them: "Pay upfront, no guarantees", us: "We fix it or you don't pay" },
+  { them: "Little Shopify experience", us: "2,000+ live stores worked on" },
+  { them: "Business hours only", us: "Available 24 hours, 7 days a week" },
+  { them: "Surprise bills & hidden fees", us: "Transparent pricing, no surprises" },
 ];
 
 export default function Stats() {
@@ -31,21 +31,33 @@ export default function Stats() {
               Since 2016, we&apos;ve been the behind-the-scenes team powering hundreds of Shopify stores.
               Every developer, designer, and marketer is vetted specifically for eCommerce — no generalists, ever.
             </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {highlights.map((item) => (
-                <li key={item} className="flex items-start gap-2.5">
-                  <svg
-                    className="w-4 h-4 text-[#3b82f6] mt-0.5 shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm text-white/70">{item}</span>
-                </li>
+
+            {/* Comparison table */}
+            <div className="rounded-2xl overflow-hidden border border-white/10">
+              <div className="grid grid-cols-2 text-xs font-bold uppercase tracking-widest">
+                <div className="bg-white/5 px-4 py-2.5 text-white/40">Others</div>
+                <div className="bg-[#2563eb]/20 px-4 py-2.5 text-[#3b82f6]">TaskDudes</div>
+              </div>
+              {comparisons.map((row, i) => (
+                <div
+                  key={i}
+                  className="grid grid-cols-2 border-t border-white/10"
+                >
+                  <div className="flex items-start gap-2 px-4 py-3 bg-white/[0.02]">
+                    <svg className="w-3.5 h-3.5 text-red-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <span className="text-xs text-white/40 leading-snug">{row.them}</span>
+                  </div>
+                  <div className="flex items-start gap-2 px-4 py-3 bg-[#2563eb]/5">
+                    <svg className="w-3.5 h-3.5 text-[#3b82f6] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-xs text-white/80 leading-snug font-medium">{row.us}</span>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
