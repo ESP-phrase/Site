@@ -36,14 +36,8 @@ export default function Hero() {
 
   return (
     <section className="relative bg-[#0f2d5e] h-screen flex items-center overflow-hidden">
-      {/* Dot grid background */}
-      <div
-        className="absolute inset-0 opacity-[0.15]"
-        style={{
-          backgroundImage: "radial-gradient(circle, #3b82f6 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-      />
+      {/* Radial spotlight */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,#1a3f7a_0%,transparent_70%)] pointer-events-none" />
       {/* Glow orbs */}
       <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#2563eb] opacity-10 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-[#1d4ed8] opacity-10 blur-3xl pointer-events-none" />
