@@ -67,6 +67,12 @@ export default function ContactForm() {
       }
 
       setSubmitted(true);
+
+      // Reddit conversion event
+      const conversionId = `lead-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+      if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).rdt) {
+        (window as unknown as { rdt: (event: string, type: string, data: Record<string, string>) => void }).rdt("track", "Lead", { conversionId });
+      }
     } catch {
       setError("Network error — please check your connection and try again.");
     } finally {
