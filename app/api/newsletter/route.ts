@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { appendFileSync } from "fs";
+import { join } from "path";
 
 export async function POST(req: NextRequest) {
   const apiKey = process.env.RESEND_API_KEY;
@@ -12,6 +14,15 @@ export async function POST(req: NextRequest) {
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Valid email required" }, { status: 400 });
+    }
+
+    // Save to local file (works in dev; Vercel is stateless so falls back to email)
+    try {
+      const filePath = join(process.cwd(), "subscribers.txt");
+      const line = `${new Date().toISOString()} | ${email}\n`;
+      appendFileSync(filePath, line, "utf8");
+    } catch (fileErr) {
+      console.warn("Could not write to subscribers.txt:", fileErr);
     }
 
     const resend = new Resend(apiKey);

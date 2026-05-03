@@ -19,6 +19,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Newsletter />
         <Services />
         <HowItWorks />
         <Pricing />
@@ -27,7 +28,6 @@ export default function Home() {
         <Testimonials />
         <Faq />
         <ContactForm />
-        <Newsletter />
       </main>
       <Footer />
       <WhatsAppButton />
