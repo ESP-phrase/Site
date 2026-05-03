@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
 
 const plans = [
   {
@@ -14,6 +16,7 @@ const plans = [
     ],
     cta: "Start Basic Fix",
     featured: false,
+    plan: "basic",
   },
   {
     name: "Priority",
@@ -29,6 +32,7 @@ const plans = [
     ],
     cta: "Get Priority Help",
     featured: true,
+    plan: "priority",
   },
   {
     name: "Emergency",
@@ -44,10 +48,34 @@ const plans = [
     ],
     cta: "Get Emergency Help",
     featured: false,
+    plan: "emergency",
   },
 ];
 
+async function handleCheckout(plan: string, setLoading: (v: string | null) => void) {
+  setLoading(plan);
+  try {
+    const res = await fetch("/api/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ plan }),
+    });
+    const data = await res.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      alert("Something went wrong. Please try again or contact us directly.");
+    }
+  } catch {
+    alert("Something went wrong. Please try again or contact us directly.");
+  } finally {
+    setLoading(null);
+  }
+}
+
 export default function Pricing() {
+  const [loading, setLoading] = useState<string | null>(null);
+
   return (
     <section id="pricing" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,16 +147,27 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                <Link
-                  href="#contact"
-                  className={`w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-bold text-sm transition-colors ${
+                <button
+                  onClick={() => handleCheckout(plan.plan, setLoading)}
+                  disabled={loading === plan.plan}
+                  className={`w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-bold text-sm transition-colors disabled:opacity-70 ${
                     plan.featured
                       ? "bg-[#2563eb] text-white hover:bg-[#1d4ed8]"
                       : "bg-[#0f2d5e] text-white hover:bg-[#1a3f7a]"
                   }`}
                 >
-                  {plan.cta}
-                </Link>
+                  {loading === plan.plan ? (
+                    <span className="flex items-center gap-2">
+                      <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                      </svg>
+                      Redirecting...
+                    </span>
+                  ) : (
+                    plan.cta
+                  )}
+                </button>
               </div>
             </div>
           ))}
