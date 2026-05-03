@@ -1,6 +1,5 @@
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
-import TrustedBy from "./components/trusted-by";
 import Services from "./components/services";
 import HowItWorks from "./components/how-it-works";
 import Pricing from "./components/pricing";
@@ -19,7 +18,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <TrustedBy />
         <Services />
         <HowItWorks />
         <Pricing />
