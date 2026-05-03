@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const badges = [
   { value: "2,000+", label: "Stores Fixed" },
@@ -8,17 +9,55 @@ const badges = [
   { value: "98%", label: "Satisfaction Rate" },
 ];
 
+const issues = ["Broke?", "Crashing?", "Losing Sales?", "Down?", "Erroring?"];
+
 export default function Hero() {
+  const [issueIndex, setIssueIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const target = issues[issueIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!deleting && displayed.length < target.length) {
+      timeout = setTimeout(() => setDisplayed(target.slice(0, displayed.length + 1)), 80);
+    } else if (!deleting && displayed.length === target.length) {
+      timeout = setTimeout(() => setDeleting(true), 2000);
+    } else if (deleting && displayed.length > 0) {
+      timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 45);
+    } else if (deleting && displayed.length === 0) {
+      setDeleting(false);
+      setIssueIndex((i) => (i + 1) % issues.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayed, deleting, issueIndex]);
+
   return (
     <section className="relative bg-[#0f2d5e] h-screen flex items-center overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+      {/* Dot grid background */}
+      <div
+        className="absolute inset-0 opacity-[0.15]"
+        style={{
+          backgroundImage: "radial-gradient(circle, #3b82f6 1px, transparent 1px)",
+          backgroundSize: "32px 32px",
+        }}
+      />
+      {/* Glow orbs */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#2563eb] opacity-10 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-[#1d4ed8] opacity-10 blur-3xl pointer-events-none" />
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
           {/* Left — copy */}
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-4">
               Your Shopify Store{" "}
-              <span className="text-[#3b82f6]">Broke?</span>
+              <span className="text-[#3b82f6]">
+                {displayed}
+                <span className="animate-pulse">|</span>
+              </span>
               <br />
               We Fix It <span className="text-[#3b82f6]">Fast.</span>
             </h1>
