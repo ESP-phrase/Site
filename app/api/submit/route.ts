@@ -65,6 +65,40 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: `Failed to send email: ${error.message}` }, { status: 500 });
     }
 
+    // Reddit Conversions API — server-side Lead event
+    const redditToken = process.env.REDDIT_ACCESS_TOKEN;
+    if (redditToken) {
+      try {
+        await fetch("https://ads-api.reddit.com/api/v3/pixels/a2_iy0yboxiui0k/conversion_events", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${redditToken}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            data: {
+              events: [
+                {
+                  event_at: Date.now(),
+                  action_source: "website",
+                  click_id: req.headers.get("x-reddit-click-id") ?? undefined,
+                  user: {
+                    email: email,
+                  },
+                  type: {
+                    tracking_type: "Lead",
+                  },
+                },
+              ],
+            },
+          }),
+        });
+      } catch (rdtErr) {
+        // Non-fatal — pixel on client already fired
+        console.error("Reddit CAPI error:", rdtErr);
+      }
+    }
+
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Submit route error:", err);
