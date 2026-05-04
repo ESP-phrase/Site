@@ -83,41 +83,6 @@ export default function ContactForm() {
               No commitments until you approve the fix plan.
             </p>
 
-            <div className="space-y-4">
-              {[
-                {
-                  icon: (
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  ),
-                  text: "Average first response in under 2 hours",
-                },
-                {
-                  icon: (
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  ),
-                  text: "Your store credentials are always secure",
-                },
-                {
-                  icon: (
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  ),
-                  text: "Fix it or you don't pay — guaranteed",
-                },
-              ].map((item) => (
-                <div key={item.text} className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-[#171717] text-white flex items-center justify-center shrink-0">
-                    {item.icon}
-                  </div>
-                  <span className="text-sm text-gray-600">{item.text}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="bg-[#fff7ed] rounded-2xl p-5 sm:p-8 border border-[#fed7aa]">
