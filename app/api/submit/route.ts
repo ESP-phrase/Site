@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
           undefined;
         const userAgent = req.headers.get("user-agent") ?? undefined;
 
-        await fetch("https://ads-api.reddit.com/api/v3/pixels/a2_io9stez4usw9/conversion_events", {
+        await fetch("https://ads-api.reddit.com/api/v3/pixels/a2_iy8mlikqvgbh/conversion_events", {
           method: "POST",
           headers: {
             "Authorization": `Bearer ${redditToken}`,

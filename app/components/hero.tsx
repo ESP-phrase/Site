@@ -17,10 +17,10 @@ export default function Hero() {
           {/* Left — copy */}
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-4">
-              Your Shopify Store{" "}
-              <span className="text-[#fb923c]">Broke?</span>
+              Shopify Broken?{" "}
+              <span className="text-[#fb923c]">Stop Losing Sales.</span>
               <br />
-              We Fix It <span className="text-[#fb923c]">Fast.</span>
+              We Fix It <span className="text-[#fb923c]">In Hours.</span>
             </h1>
 
             <p className="text-base sm:text-lg text-white/70 max-w-xl mb-5 leading-relaxed">
@@ -48,7 +48,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-base hover:bg-[#ea580c] transition-colors shadow-lg shadow-blue-500/30"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-base hover:bg-[#ea580c] transition-colors shadow-lg shadow-orange-500/30"
               >
                 Get Help Now
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@ export default function Hero() {
               {/* Browser mockup */}
               <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10">
                 {/* Chrome bar */}
-                <div className="bg-[#1a1a2e] px-5 py-3 flex items-center gap-2 border-b border-white/10">
+                <div className="bg-[#1c1c1c] px-5 py-3 flex items-center gap-2 border-b border-white/10">
                   <span className="w-3 h-3 rounded-full bg-red-400/80" />
                   <span className="w-3 h-3 rounded-full bg-yellow-400/80" />
                   <span className="w-3 h-3 rounded-full bg-green-400/80" />
@@ -101,7 +101,7 @@ export default function Hero() {
                 </div>
 
                 {/* Page content */}
-                <div className="bg-[#0d1b2a] p-7 space-y-4">
+                <div className="bg-[#111111] p-7 space-y-4">
                   {/* Error banner */}
                   <div className="flex items-start gap-4 p-4 rounded-xl bg-red-500/10 border border-red-500/30">
                     <svg className="w-6 h-6 text-red-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +135,7 @@ export default function Hero() {
               </div>
 
               {/* Floating expert card */}
-              <div className="absolute -bottom-5 -left-4 z-20 flex items-center gap-3 px-4 py-3 rounded-2xl bg-[#1e3a5f] border border-white/10 shadow-xl">
+              <div className="absolute -bottom-5 -left-4 z-20 flex items-center gap-3 px-4 py-3 rounded-2xl bg-[#262626] border border-white/10 shadow-xl">
                 <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 bg-[#f97316]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
