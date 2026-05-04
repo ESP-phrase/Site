@@ -54,7 +54,7 @@ export default function ParticleNetwork() {
 
         ctx!.beginPath();
         ctx!.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx!.fillStyle = "rgba(99,160,255,0.7)";
+        ctx!.fillStyle = "rgba(56,189,248,0.8)";
         ctx!.fill();
       }
 
@@ -64,11 +64,11 @@ export default function ParticleNetwork() {
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < MAX_DIST) {
-            const alpha = (1 - dist / MAX_DIST) * 0.25;
+            const alpha = (1 - dist / MAX_DIST) * 0.3;
             ctx!.beginPath();
             ctx!.moveTo(particles[i].x, particles[i].y);
             ctx!.lineTo(particles[j].x, particles[j].y);
-            ctx!.strokeStyle = `rgba(99,160,255,${alpha})`;
+            ctx!.strokeStyle = `rgba(56,189,248,${alpha})`;
             ctx!.lineWidth = 0.8;
             ctx!.stroke();
           }

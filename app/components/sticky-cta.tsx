@@ -34,7 +34,7 @@ export default function StickyCta() {
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <div className="bg-[#0f2d5e] border-t border-white/10 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 max-w-full">
+      <div className="bg-[#09090f] border-t border-white/10 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 max-w-full">
         <div className="flex items-center gap-2 min-w-0">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
           <span className="text-white text-sm font-medium truncate">

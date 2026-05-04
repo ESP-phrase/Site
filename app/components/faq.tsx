@@ -39,7 +39,7 @@ export default function Faq() {
           <span className="inline-block px-3 py-1 rounded-full bg-[#f0f4ff] text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-4">
             FAQ
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#0f2d5e] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#09090f] tracking-tight mb-4">
             Common Questions
           </h2>
           <p className="text-gray-500 text-lg">Everything you need to know before reaching out.</p>
@@ -55,7 +55,7 @@ export default function Faq() {
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-[#f0f4ff] transition-colors"
               >
-                <span className="flex-1 min-w-0 font-bold text-[#0f2d5e] text-sm pr-4 text-left">{faq.q}</span>
+                <span className="flex-1 min-w-0 font-bold text-[#09090f] text-sm pr-4 text-left">{faq.q}</span>
                 <svg
                   className={`w-5 h-5 text-[#2563eb] shrink-0 transition-transform duration-200 ${open === i ? "rotate-180" : ""}`}
                   fill="none"

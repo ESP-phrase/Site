@@ -16,7 +16,7 @@ const highlights = [
 
 export default function Stats() {
   return (
-    <section className="py-20 lg:py-28 bg-[#0f2d5e] overflow-hidden">
+    <section className="py-20 lg:py-28 bg-[#09090f] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -25,7 +25,7 @@ export default function Stats() {
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6 leading-tight">
               We Live &amp; Breathe{" "}
-              <span className="text-[#3b82f6]">Shopify</span>
+              <span className="text-[#38bdf8]">Shopify</span>
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-8">
               Since 2016, we&apos;ve been the behind-the-scenes team powering hundreds of Shopify stores.
@@ -35,7 +35,7 @@ export default function Stats() {
               {highlights.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <svg
-                    className="w-4 h-4 text-[#3b82f6] mt-0.5 shrink-0"
+                    className="w-4 h-4 text-[#38bdf8] mt-0.5 shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -55,7 +55,7 @@ export default function Stats() {
                 className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm"
               >
                 <div className="text-3xl sm:text-4xl font-black text-white mb-1">{stat.value}</div>
-                <div className="text-sm font-semibold text-[#3b82f6] mb-1">{stat.label}</div>
+                <div className="text-sm font-semibold text-[#38bdf8] mb-1">{stat.label}</div>
                 <div className="text-xs text-white/50">{stat.sub}</div>
               </div>
             ))}

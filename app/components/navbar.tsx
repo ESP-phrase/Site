@@ -10,12 +10,12 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-[#0f2d5e]">
+    <header className="fixed top-0 left-0 right-0 z-40 bg-[#09090f]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <span className={`${fredoka.className} text-white text-2xl tracking-tight`}>
-              Task<span className="text-[#3b82f6]">Dudes</span>
+              Task<span className="text-[#38bdf8]">Dudes</span>
             </span>
           </Link>
 
@@ -58,7 +58,7 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden border-t border-white/10 bg-[#0f2d5e] px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t border-white/10 bg-[#09090f] px-4 py-4 flex flex-col gap-4">
           {["Services", "How It Works", "Pricing", "Testimonials"].map((item) => (
             <Link
               key={item}

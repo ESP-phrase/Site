@@ -89,7 +89,7 @@ export default function ContactForm() {
             <span className="inline-block px-3 py-1 rounded-full bg-[#f0f4ff] text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-6">
               Get Help
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0f2d5e] tracking-tight mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#09090f] tracking-tight mb-6 leading-tight">
               Store Down?
               <br />
               <span className="text-[#2563eb]">Let&apos;s Fix It Now.</span>
@@ -127,7 +127,7 @@ export default function ContactForm() {
                 },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-[#0f2d5e] text-white flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-[#09090f] text-white flex items-center justify-center shrink-0">
                     {item.icon}
                   </div>
                   <span className="text-sm text-gray-600">{item.text}</span>
@@ -139,12 +139,12 @@ export default function ContactForm() {
           <div className="bg-[#f0f4ff] rounded-2xl p-5 sm:p-8 border border-[#e0e9ff]">
             {submitted ? (
               <div className="text-center py-10">
-                <div className="w-16 h-16 rounded-full bg-[#0f2d5e] flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-[#09090f] flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-black text-[#0f2d5e] mb-2">Request Received!</h3>
+                <h3 className="text-xl font-black text-[#09090f] mb-2">Request Received!</h3>
                 <p className="text-gray-500 text-sm">
                   A Shopify expert will be in touch within the hour. Check your inbox.
                 </p>
@@ -153,7 +153,7 @@ export default function ContactForm() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#0f2d5e] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
                       Your Name
                     </label>
                     <input
@@ -166,7 +166,7 @@ export default function ContactForm() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-[#0f2d5e] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
                       Email
                     </label>
                     <input
@@ -181,7 +181,7 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#0f2d5e] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
                     Store URL
                   </label>
                   <input
@@ -195,7 +195,7 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#0f2d5e] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
                     Issue Type
                   </label>
                   <select
@@ -216,7 +216,7 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#0f2d5e] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
                     Describe the Problem
                   </label>
                   <textarea
@@ -247,7 +247,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-4 px-6 rounded-xl bg-[#0f2d5e] text-white font-bold text-sm hover:bg-[#1a3f7a] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+                  className="w-full py-4 px-6 rounded-xl bg-[#09090f] text-white font-bold text-sm hover:bg-[#131320] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>

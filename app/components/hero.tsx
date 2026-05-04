@@ -10,7 +10,7 @@ const badges = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#0f2d5e] h-screen flex items-center overflow-hidden">
+    <section className="relative bg-[#09090f] h-screen flex items-center overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
@@ -18,9 +18,9 @@ export default function Hero() {
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-4">
               Your Shopify Store{" "}
-              <span className="text-[#3b82f6]">Broke?</span>
+              <span className="text-[#38bdf8]">Broke?</span>
               <br />
-              We Fix It <span className="text-[#3b82f6]">Fast.</span>
+              We Fix It <span className="text-[#38bdf8]">Fast.</span>
             </h1>
 
             <p className="text-base sm:text-lg text-white/70 max-w-xl mb-5 leading-relaxed">

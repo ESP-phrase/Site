@@ -16,7 +16,7 @@ export default function WhatsAppButton() {
       className="fixed bottom-6 right-6 z-50 flex items-center gap-3 group"
     >
       {hovered && (
-        <span className="bg-[#0f2d5e] text-white text-xs font-semibold px-3 py-2 rounded-xl shadow-lg whitespace-nowrap">
+        <span className="bg-[#09090f] text-white text-xs font-semibold px-3 py-2 rounded-xl shadow-lg whitespace-nowrap">
           Chat on WhatsApp
         </span>
       )}

@@ -66,13 +66,13 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
       {/* Modal */}
       <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden">
         {/* Header */}
-        <div className="bg-[#0f2d5e] px-6 py-5 flex items-center justify-between">
+        <div className="bg-[#09090f] px-6 py-5 flex items-center justify-between">
           <div>
             <p className="text-white/60 text-xs uppercase tracking-widest font-semibold mb-0.5">
               Selected Plan
             </p>
             <h2 className="text-white font-black text-xl">
-              {plan.name} — <span className="text-[#3b82f6]">{plan.price}</span>
+              {plan.name} — <span className="text-[#38bdf8]">{plan.price}</span>
             </h2>
           </div>
           <button
@@ -93,7 +93,7 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-bold text-[#0f2d5e] mb-1.5 uppercase tracking-wide">
+              <label className="block text-xs font-bold text-[#09090f] mb-1.5 uppercase tracking-wide">
                 Your Name
               </label>
               <input
@@ -106,7 +106,7 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
               />
             </div>
             <div>
-              <label className="block text-xs font-bold text-[#0f2d5e] mb-1.5 uppercase tracking-wide">
+              <label className="block text-xs font-bold text-[#09090f] mb-1.5 uppercase tracking-wide">
                 Email
               </label>
               <input
@@ -121,7 +121,7 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-[#0f2d5e] mb-1.5 uppercase tracking-wide">
+            <label className="block text-xs font-bold text-[#09090f] mb-1.5 uppercase tracking-wide">
               Store URL
             </label>
             <input
@@ -135,7 +135,7 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-[#0f2d5e] mb-1.5 uppercase tracking-wide">
+            <label className="block text-xs font-bold text-[#09090f] mb-1.5 uppercase tracking-wide">
               Describe the Problem
             </label>
             <textarea

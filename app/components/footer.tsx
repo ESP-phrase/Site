@@ -58,13 +58,13 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f2d5e] text-white">
+    <footer className="bg-[#09090f] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center mb-4">
               <span className={`${fredoka.className} text-white text-2xl tracking-tight`}>
-                Task<span className="text-[#3b82f6]">Dudes</span>
+                Task<span className="text-[#38bdf8]">Dudes</span>
               </span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">

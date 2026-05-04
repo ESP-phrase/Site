@@ -68,7 +68,7 @@ export default function Pricing() {
           <span className="inline-block px-3 py-1 rounded-full bg-[#f0f4ff] text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-4">
             Pricing
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0f2d5e] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#09090f] tracking-tight mb-4">
             Transparent Pricing.
             <br />
             <span className="text-[#2563eb]">No Surprises.</span>
@@ -84,8 +84,8 @@ export default function Pricing() {
               key={plan.name}
               className={`relative rounded-2xl flex flex-col ${
                 plan.featured
-                  ? "bg-[#0f2d5e] text-white shadow-2xl shadow-navy/20 ring-4 ring-[#2563eb]/30 md:scale-105"
-                  : "bg-[#f0f4ff] text-[#0f2d5e]"
+                  ? "bg-[#09090f] text-white shadow-2xl shadow-navy/20 ring-4 ring-[#2563eb]/30 md:scale-105"
+                  : "bg-[#f0f4ff] text-[#09090f]"
               }`}
             >
               {plan.featured && (
@@ -98,11 +98,11 @@ export default function Pricing() {
 
               <div className="p-8 flex flex-col flex-1">
                 <div className="mb-6">
-                  <h3 className={`text-lg font-bold mb-1 ${plan.featured ? "text-white" : "text-[#0f2d5e]"}`}>
+                  <h3 className={`text-lg font-bold mb-1 ${plan.featured ? "text-white" : "text-[#09090f]"}`}>
                     {plan.name}
                   </h3>
                   <div className="flex items-end gap-1 mb-3">
-                    <span className={`text-5xl font-black tracking-tight ${plan.featured ? "text-white" : "text-[#0f2d5e]"}`}>
+                    <span className={`text-5xl font-black tracking-tight ${plan.featured ? "text-white" : "text-[#09090f]"}`}>
                       {plan.price}
                     </span>
                     <span className={`text-sm mb-2 ${plan.featured ? "text-white/60" : "text-gray-500"}`}>
@@ -118,7 +118,7 @@ export default function Pricing() {
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2.5">
                       <svg
-                        className={`w-4 h-4 mt-0.5 shrink-0 ${plan.featured ? "text-[#3b82f6]" : "text-[#2563eb]"}`}
+                        className={`w-4 h-4 mt-0.5 shrink-0 ${plan.featured ? "text-[#38bdf8]" : "text-[#2563eb]"}`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -137,7 +137,7 @@ export default function Pricing() {
                   className={`w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-bold text-sm transition-colors ${
                     plan.featured
                       ? "bg-[#2563eb] text-white hover:bg-[#1d4ed8]"
-                      : "bg-[#0f2d5e] text-white hover:bg-[#1a3f7a]"
+                      : "bg-[#09090f] text-white hover:bg-[#131320]"
                   }`}
                 >
                   {plan.cta}

@@ -69,7 +69,7 @@ export default function Services() {
           <span className="inline-block px-3 py-1 rounded-full bg-[#f0f4ff] text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-4">
             What We Fix
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0f2d5e] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#09090f] tracking-tight mb-4">
             Everything You Need When
             <br />
             <span className="text-[#2563eb]">Shopify Breaks</span>
@@ -85,10 +85,10 @@ export default function Services() {
               key={service.title}
               className="group p-6 rounded-2xl bg-[#f0f4ff] border border-transparent hover:border-[#2563eb]/20 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-200"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#0f2d5e] text-white flex items-center justify-center mb-4 group-hover:bg-[#2563eb] transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-[#09090f] text-white flex items-center justify-center mb-4 group-hover:bg-[#2563eb] transition-colors">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-bold text-[#0f2d5e] mb-2">{service.title}</h3>
+              <h3 className="text-lg font-bold text-[#09090f] mb-2">{service.title}</h3>
               <p className="text-sm text-gray-600 leading-relaxed">{service.description}</p>
             </div>
           ))}

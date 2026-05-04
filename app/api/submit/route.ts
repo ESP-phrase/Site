@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
       subject: `[TaskDudes] New Fix Request — ${issueType} from ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
-          <div style="background: #0f2d5e; padding: 24px; border-radius: 12px 12px 0 0;">
+          <div style="background: #09090f; padding: 24px; border-radius: 12px 12px 0 0;">
             <h1 style="color: white; margin: 0; font-size: 22px;">New Fix Request</h1>
             <p style="color: rgba(255,255,255,0.6); margin: 4px 0 0; font-size: 14px;">TaskDudes — Shopify Support</p>
           </div>
@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
               </tr>
             </table>
             <div style="margin-top: 24px;">
-              <a href="mailto:${email}" style="display: inline-block; background: #0f2d5e; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">Reply to ${name}</a>
+              <a href="mailto:${email}" style="display: inline-block; background: #09090f; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">Reply to ${name}</a>
             </div>
           </div>
         </div>

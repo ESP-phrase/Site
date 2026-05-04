@@ -30,7 +30,7 @@ export default function HowItWorks() {
           <span className="inline-block px-3 py-1 rounded-full bg-white text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-4">
             The Process
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0f2d5e] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#09090f] tracking-tight mb-4">
             Done In 3 Simple Steps
           </h2>
           <p className="text-lg text-gray-500 max-w-xl mx-auto">
@@ -52,7 +52,7 @@ export default function HowItWorks() {
                   <div className="lg:hidden absolute top-12 left-1/2 translate-x-8 h-full w-px bg-gradient-to-b from-[#2563eb]/30 to-transparent" />
                 )}
 
-                <h3 className="text-xl font-bold text-[#0f2d5e] mb-3">{step.title}</h3>
+                <h3 className="text-xl font-bold text-[#09090f] mb-3">{step.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4 max-w-xs">{step.description}</p>
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2563eb] bg-white px-3 py-1.5 rounded-full border border-[#e0e9ff]">
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

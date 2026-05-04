@@ -24,7 +24,7 @@ export default function ActivityTicker() {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-[#0f2d5e] h-8 flex items-center justify-center gap-2">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-[#09090f] h-8 flex items-center justify-center gap-2">
       <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse shrink-0" />
       <span
         className="text-xs font-medium text-white/80 transition-opacity duration-300"
