@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
-import PostHogProvider from "./components/posthog-provider";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -44,11 +43,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} h-full`}>
       <body className="min-h-full flex flex-col">
-        <PostHogProvider>
-          {children}
-        </PostHogProvider>
+        {children}
         <Analytics />
-        <Script src="https://t.contentsquare.net/uxa/1ee6c7074c6eb.js" strategy="afterInteractive" />
         <Script id="clarity" strategy="afterInteractive">{`
           (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
