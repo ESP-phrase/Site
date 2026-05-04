@@ -29,7 +29,7 @@ export default function Hero() {
             </p>
 
             {/* Quick issue selector */}
-            <div className="mb-6">
+            <div className="hidden sm:block mb-6">
               <p className="text-xs font-bold uppercase tracking-widest text-white/40 mb-2.5">What&apos;s broken?</p>
               <div className="flex flex-wrap gap-2">
                 {["Checkout Error", "Theme / Display Bug", "App Conflict", "Speed Issues", "Payment Failure"].map((issue) => (
