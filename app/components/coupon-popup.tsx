@@ -79,7 +79,7 @@ export default function CouponPopup() {
 
   return (
     <div
-      className="fixed bottom-6 right-6 z-50 w-80 animate-in slide-in-from-bottom-4 duration-300"
+      className="hidden sm:block fixed bottom-6 right-6 z-50 w-80 animate-in slide-in-from-bottom-4 duration-300"
       style={{ animation: "slideUp 0.35s cubic-bezier(0.16,1,0.3,1) both" }}
     >
       <style>{`
