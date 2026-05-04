@@ -48,7 +48,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-base hover:bg-[#ea580c] transition-colors shadow-lg shadow-orange-500/30"
+                className="btn-glow inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-base transition-colors shadow-lg shadow-orange-500/30"
               >
                 Get Help Now
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export default function Hero() {
               </Link>
               <Link
                 href="#pricing"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border-2 border-white/30 text-white font-bold text-base hover:border-white/60 hover:bg-white/5 transition-colors"
+                className="btn-shimmer inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border-2 border-white/30 text-white font-bold text-base hover:bg-white/5 transition-colors"
               >
                 See Pricing
               </Link>
