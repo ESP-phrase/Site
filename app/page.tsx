@@ -11,6 +11,7 @@ import ContactForm from "./components/contact-form";
 import Newsletter from "./components/newsletter";
 import Footer from "./components/footer";
 import WhatsAppButton from "./components/whatsapp-button";
+import CouponPopup from "./components/coupon-popup";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -135,6 +136,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <CouponPopup />
     </>
   );
 }
