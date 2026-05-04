@@ -5,9 +5,19 @@ import { useState, useEffect } from "react";
 const COUPON_CODE = "SAVE25";
 const STORAGE_KEY = "td_coupon_dismissed";
 
+function getEmailError(val: string): string {
+  if (!val) return "";
+  if (!val.includes("@")) return "Missing @ — e.g. name@store.com";
+  const [local, domain] = val.split("@");
+  if (!local) return "Add something before the @";
+  if (!domain || !domain.includes(".")) return "Add a domain — e.g. name@store.com";
+  return "";
+}
+
 export default function CouponPopup() {
   const [visible, setVisible] = useState(false);
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "revealed">("idle");
   const [dismissed, setDismissed] = useState(false);
 
@@ -44,7 +54,9 @@ export default function CouponPopup() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email) return;
+    const err = getEmailError(email);
+    if (err || !email) { setEmailError(err || "Email is required"); return; }
+    setEmailError("");
     setStatus("loading");
     try {
       await fetch("/api/newsletter", {
@@ -109,15 +121,39 @@ export default function CouponPopup() {
                 Enter your email to unlock the discount code. One-time use.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-2">
-                <input
-                  type="email"
-                  required
-                  placeholder="your@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder-white/25 focus:outline-none focus:border-[#f97316]/50 focus:ring-1 focus:ring-[#f97316]/20 transition"
-                />
+              <form onSubmit={handleSubmit} noValidate className="space-y-2">
+                <div className="relative">
+                  <input
+                    type="email"
+                    placeholder="your@email.com"
+                    value={email}
+                    onChange={(e) => { setEmail(e.target.value); setEmailError(getEmailError(e.target.value)); }}
+                    className={`w-full px-3.5 py-2.5 rounded-xl bg-white/5 border text-white text-sm placeholder-white/25 focus:outline-none focus:ring-1 transition pr-9 ${
+                      emailError ? "border-red-500/60 focus:border-red-500 focus:ring-red-500/20" : "border-white/10 focus:border-[#f97316]/50 focus:ring-[#f97316]/20"
+                    }`}
+                  />
+                  {email && (
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                      {emailError ? (
+                        <svg className="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 9v2m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z" />
+                        </svg>
+                      ) : (
+                        <svg className="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      )}
+                    </div>
+                  )}
+                </div>
+                {emailError && (
+                  <p className="text-red-400 text-[11px] flex items-center gap-1">
+                    <svg className="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                    {emailError}
+                  </p>
+                )}
                 <button
                   type="submit"
                   disabled={status === "loading"}

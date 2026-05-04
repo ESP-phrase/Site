@@ -41,13 +41,32 @@ const perks = [
   },
 ];
 
+function getEmailError(val: string): string {
+  if (!val) return "Email is required";
+  if (!val.includes("@")) return "Missing @ — try name@yourstore.com";
+  const [local, domain] = val.split("@");
+  if (!local) return "Add something before the @";
+  if (!domain || !domain.includes(".")) return "Add a valid domain — e.g. name@store.com";
+  return "";
+}
+
 export default function Newsletter() {
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [touched, setTouched] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  function handleEmailChange(val: string) {
+    setEmail(val);
+    if (touched) setEmailError(getEmailError(val));
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email) return;
+    setTouched(true);
+    const err = getEmailError(email);
+    if (err) { setEmailError(err); return; }
+    setEmailError("");
     setStatus("loading");
     try {
       const res = await fetch("/api/newsletter", {
@@ -126,17 +145,42 @@ export default function Newsletter() {
                 <p className="text-white/50 text-sm">Check your inbox for a welcome email.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} noValidate className="space-y-4">
                 <div>
                   <label className="block text-xs font-bold text-white/50 uppercase tracking-wider mb-2">Your Email</label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="you@yourstore.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/15 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#fb923c] focus:bg-white/15 transition"
-                  />
+                  <div className="relative">
+                    <input
+                      type="email"
+                      placeholder="you@yourstore.com"
+                      value={email}
+                      onChange={(e) => handleEmailChange(e.target.value)}
+                      onBlur={() => { setTouched(true); setEmailError(getEmailError(email)); }}
+                      className={`w-full px-4 py-3.5 rounded-xl bg-white/10 border text-white text-sm placeholder-white/30 focus:outline-none focus:bg-white/15 transition pr-10 ${
+                        emailError ? "border-red-500/60 focus:border-red-500" : email && !emailError ? "border-green-500/50 focus:border-green-500" : "border-white/15 focus:border-[#fb923c]"
+                      }`}
+                    />
+                    {email && (
+                      <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                        {emailError ? (
+                          <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 9v2m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z" />
+                          </svg>
+                        ) : (
+                          <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  {emailError && (
+                    <p className="flex items-center gap-1.5 mt-1.5 text-red-400 text-xs">
+                      <svg className="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                      </svg>
+                      {emailError}
+                    </p>
+                  )}
                 </div>
 
                 {status === "error" && (

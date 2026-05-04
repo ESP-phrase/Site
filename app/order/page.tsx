@@ -33,10 +33,20 @@ function OrderForm() {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
   const [storeUrl, setStoreUrl] = useState("");
   const [description, setDescription] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  function getEmailError(val: string): string {
+    if (!val) return "Email is required";
+    if (!val.includes("@")) return "Missing @ — try name@yourstore.com";
+    const [local, domain] = val.split("@");
+    if (!local) return "Add something before the @";
+    if (!domain || !domain.includes(".")) return "Add a domain — e.g. name@store.com";
+    return "";
+  }
 
   useEffect(() => {
     if (!planDetails[planKey]) router.replace("/order?plan=basic");
@@ -48,6 +58,8 @@ function OrderForm() {
     setLoading(true);
 
     const conversionId = `checkout-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    const emailErr = getEmailError(email);
+    if (emailErr) { setEmailError(emailErr); setLoading(false); return; }
 
     try {
       const res = await fetch("/api/checkout", {
