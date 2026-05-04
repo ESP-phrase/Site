@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
+import ClarityInit from "./components/clarity";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -44,14 +45,8 @@ export default function RootLayout({
     <html lang="en" className={`${spaceGrotesk.variable} h-full`}>
       <body className="min-h-full flex flex-col">
         {children}
+        <ClarityInit />
         <Analytics />
-        <Script id="clarity" strategy="afterInteractive">{`
-          (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "wlsd3xkupd");
-        `}</Script>
         <Script id="reddit-pixel" strategy="afterInteractive">{`
           !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_iy8mlikqvgbh",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
           rdt('init','a2_iy8mlikqvgbh',{email:'aubreynicholsacc@gmail.com',phoneNumber:'+15127967462'});
