@@ -13,10 +13,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://taskdudes.xyz"),
   title: "TaskDudes — Shopify Break Fixes, Fast",
   description:
     "When your Shopify store breaks, TaskDudes fixes it. Checkout errors, theme bugs, app conflicts, payment failures — resolved by experts in hours, not days.",
   keywords: ["Shopify support", "Shopify fix", "Shopify emergency", "TaskDudes"],
+  alternates: {
+    canonical: "https://taskdudes.xyz",
+  },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
@@ -24,15 +28,25 @@ export const metadata: Metadata = {
     title: "TaskDudes — Shopify Break Fixes, Fast",
     description:
       "When your Shopify store breaks, TaskDudes fixes it. Checkout errors, theme bugs, app conflicts, payment failures — resolved by experts in hours, not days.",
+    url: "https://taskdudes.xyz",
     type: "website",
     locale: "en_US",
     siteName: "TaskDudes",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TaskDudes — Shopify Break Fixes, Fast",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "TaskDudes — Shopify Break Fixes, Fast",
     description:
       "When your Shopify store breaks, TaskDudes fixes it. Checkout errors, theme bugs, app conflicts, payment failures — resolved by experts in hours, not days.",
+    images: ["/og-image.png"],
   },
 };
 

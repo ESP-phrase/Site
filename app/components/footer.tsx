@@ -64,10 +64,13 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex items-center justify-center">
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} TaskDudes. All rights reserved. Not affiliated with Shopify Inc.
           </p>
+          <Link href="https://taskdudes.xyz" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+            taskdudes.xyz
+          </Link>
         </div>
       </div>
     </footer>
