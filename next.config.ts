@@ -36,12 +36,12 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://*.redditstatic.com https://us.i.posthog.com https://cdn.vercel-insights.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://*.redditstatic.com https://us.i.posthog.com https://cdn.vercel-insights.com https://t.contentsquare.net",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https://i.pravatar.cc https://*.redditstatic.com https://*.reddit.com",
       "frame-src https://js.stripe.com",
-      "connect-src 'self' https://api.stripe.com https://us.i.posthog.com https://vitals.vercel-insights.com https://*.reddit.com https://*.redditstatic.com https://alb.reddit.com",
+      "connect-src 'self' https://api.stripe.com https://us.i.posthog.com https://vitals.vercel-insights.com https://*.reddit.com https://*.redditstatic.com https://alb.reddit.com https://*.contentsquare.net",
     ].join("; "),
   },
 ];
