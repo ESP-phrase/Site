@@ -6,6 +6,13 @@ import Link from "next/link";
 
 const fredoka = Fredoka({ subsets: ["latin"], weight: ["600"] });
 
+const navItems = [
+  { label: "Services", href: "#services" },
+  { label: "How It Works", href: "#how-it-works" },
+  { label: "Partnership", href: "#partnership" },
+  { label: "Testimonials", href: "#testimonials" },
+];
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -20,13 +27,13 @@ export default function Navbar() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            {["Services", "How It Works", "Pricing", "Testimonials"].map((item) => (
+            {navItems.map((item) => (
               <Link
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                key={item.href}
+                href={item.href}
                 className="text-sm font-medium text-white/70 hover:text-white transition-colors"
               >
-                {item}
+                {item.label}
               </Link>
             ))}
           </nav>
@@ -59,14 +66,14 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="md:hidden border-t border-white/10 bg-[#171717] px-4 py-4 flex flex-col gap-4">
-          {["Services", "How It Works", "Pricing", "Testimonials"].map((item) => (
+          {navItems.map((item) => (
             <Link
-              key={item}
-              href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+              key={item.href}
+              href={item.href}
               className="text-sm font-medium text-white/70 hover:text-white"
               onClick={() => setMenuOpen(false)}
             >
-              {item}
+              {item.label}
             </Link>
           ))}
           <Link

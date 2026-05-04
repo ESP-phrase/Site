@@ -1,56 +1,41 @@
 # TaskDudes — Shopify Break Fixes, Fast
 
 ## What we do
-TaskDudes is a Shopify emergency support and repair service. We diagnose and fix broken Shopify stores — checkout errors, theme bugs, app conflicts, payment failures, speed issues — in hours, not days.
+TaskDudes is an eCommerce emergency support and repair team. We diagnose and fix broken stores — checkout errors, theme bugs, app conflicts, payment failures, speed issues — across Shopify and other platforms, in hours not days.
 
 ## Who we serve
-Shopify store owners who are losing sales due to a broken store and need a fast, reliable fix from a certified expert.
+Store owners, creators, and brands who need reliable fixes without guessing who will touch production.
 
-## Services
+## Partnership model (creators & brands)
+Flat-rate packages are not sold on the website. TaskDudes negotiates custom commercial terms with creators and brands — including **per-click** and other performance-aligned structures — so economics fit campaigns and traffic. Reach out via the contact form or WhatsApp to scope support and agree terms before work begins.
 
-### Basic Fix — $35
-- 1 issue diagnosed and fixed
-- Response within 4 hours
-- Fix report included
-- 30-day fix guarantee
-- Email support
-
-### Priority — $175
-- Up to 3 issues fixed
-- Response within 2 hours
-- Detailed fix report
-- 60-day fix guarantee
-- Priority chat support
-- Follow-up check included
-
-### Emergency — $299
-- Unlimited issue scope
-- Response within 30 minutes
-- Full audit and fix report
-- 90-day fix guarantee
-- Dedicated Slack channel
-- Post-fix monitoring for 7 days
+## Services (examples)
+- Checkout and payment troubleshooting
+- Theme bugs and customization
+- App conflicts and integrations
+- Speed and Core Web Vitals work
+- Product page and cart/checkout UX improvements
+- SEO/metadata fixes and analytics tracking setup
+- Emergency migrations and platform moves
 
 ## How it works
-1. Choose a plan based on urgency
-2. Describe your Shopify problem
-3. Pay securely via Stripe
-4. A Shopify expert contacts you within your plan's response time
-5. We fix the issue and send you a full report
+1. Submit details through the contact form (or WhatsApp) — store URL, issue, urgency
+2. We respond to discuss partnership terms and timelines where relevant
+3. You approve the fix plan before we change production
+4. We resolve the issue, test, and send a fix report
 
 ## Guarantees
-Every fix comes with a money-back guarantee. If the same issue returns within the guarantee window, we fix it again for free.
+If our experts cannot resolve an agreed scoped issue after diagnosis, you don't pay for that engagement per our guarantee policy. Specific windows are confirmed in writing when we partner.
 
 ## Contact
 - WhatsApp: https://wa.me/15127967462
-- Website: https://www.taskdudes.xyz
+- Website: https://taskdudes.xyz
 
 ## Key facts
 - Operating since 2016
-- 2,000+ Shopify stores fixed
+- 2,000+ stores supported
 - 98% customer satisfaction rate
-- Average response time: 2 hours
+- Typical first expert reply within ~2 hours for inbound requests
 - Shopify Partner certified experts
 - Available 24/7
-- No overseas outsourcing — direct experts only
-- Transparent flat-rate pricing, no hidden fees
+- Direct experts — negotiated partnerships instead of flat-rate tiers on-site

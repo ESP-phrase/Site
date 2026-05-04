@@ -5,7 +5,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "How fast will you respond?",
-    a: "Most requests get an expert assigned within 2 hours. For Emergency plan requests, we aim for 30 minutes or less. We're available 24/7 including weekends.",
+    a: "Most inbound requests get an expert reply within about two hours. If your partnership includes tighter SLAs or campaign launches, we'll agree response targets when we finalize terms.",
   },
   {
     q: "Do you need my Shopify admin password?",
@@ -16,8 +16,8 @@ const faqs = [
     a: "You pay nothing. If our experts are unable to resolve your issue after a thorough diagnosis, you receive a full refund. No questions, no hassle.",
   },
   {
-    q: "What does the pricing cover exactly?",
-    a: "Each plan covers the scope described — Basic Fix handles a single well-defined issue, Priority covers up to 3 issues with faster response, and Emergency covers unlimited scope with dedicated support. All plans include a detailed fix report.",
+    q: "How does pricing work for creators and brands?",
+    a: "We don't publish flat-rate packages anymore. Creators and brands negotiate with us directly — often including per-click or performance-aligned economics — so what you pay matches traffic, campaigns, and scope. You'll get a written summary before anything goes live.",
   },
   {
     q: "Do you work on all Shopify themes and apps?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What happens after the fix?",
-    a: "You receive a detailed report explaining what was broken, what we changed, and how to avoid it in the future. Priority and Emergency plans include a follow-up check to confirm everything remains stable.",
+    a: "You receive a detailed report explaining what was broken, what we changed, and how to avoid it in the future. Ongoing partnerships can include follow-up checks depending on what we negotiate.",
   },
 ];
 

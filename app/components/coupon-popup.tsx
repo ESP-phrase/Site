@@ -196,7 +196,7 @@ export default function CouponPopup() {
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm">Your code is ready!</p>
-                  <p className="text-white/40 text-xs">Apply at checkout for 25% off</p>
+                  <p className="text-white/40 text-xs">Mention SAVE25 when you finalize terms with us</p>
                 </div>
               </div>
 
@@ -214,11 +214,11 @@ export default function CouponPopup() {
               </button>
 
               <a
-                href="/#pricing"
+                href="/#partnership"
                 onClick={dismiss}
                 className="block text-center text-[#f97316] text-xs font-bold mt-3 hover:underline"
               >
-                View plans →
+                Partnership overview →
               </a>
 
               <button

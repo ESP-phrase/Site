@@ -1,164 +1,100 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
-const plans = [
+const partnershipPoints = [
   {
-    name: "Basic Fix",
-    price: "$35",
-    description: "Perfect for a single, well-defined issue that needs a quick resolution.",
-    features: [
-      "1 issue diagnosed & fixed",
-      "Response within 4 hours",
-      "Fix report included",
-      "30-day fix guarantee",
-      "Email support",
-    ],
-    cta: "Start Basic Fix",
-    featured: false,
-    plan: "basic",
+    title: "Performance-aligned terms",
+    description:
+      "We work with creators and brands on structures that match how you scale — including negotiated per-click or performance-based arrangements instead of flat monthly packages.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      </svg>
+    ),
   },
   {
-    name: "Priority",
-    price: "$175",
-    description: "For urgent issues or when you need faster turnaround with ongoing support.",
-    features: [
-      "Up to 3 issues fixed",
-      "Response within 2 hours",
-      "Detailed fix report",
-      "60-day fix guarantee",
-      "Priority chat support",
-      "Follow-up check included",
-    ],
-    cta: "Get Priority Help",
-    featured: true,
-    plan: "priority",
+    title: "Custom scope per partner",
+    description:
+      "Campaign volume, storefront complexity, and support depth all inform the deal. You discuss goals and economics with our team — nothing is one-size-fits-all.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
   },
   {
-    name: "Unlimited",
-    price: "$299",
-    description: "Unlimited fixes every month. One flat rate, no matter how many issues come up.",
-    features: [
-      "Unlimited fixes per month",
-      "Response within 30 minutes",
-      "Full audit + fix report",
-      "90-day fix guarantee",
-      "Dedicated Slack channel",
-      "Priority 24/7 support",
-    ],
-    cta: "Get Unlimited Access",
-    featured: false,
-    plan: "lifetime",
+    title: "Same expert-quality fixes",
+    description:
+      "Checkout errors, themes, apps, speed — you still get vetted eCommerce specialists and clear reporting; only the commercial model is tailored to your partnership.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
   },
 ];
 
-function trackAddToCart(planName: string, price: string) {
-  const conversionId = `atc-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-  if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).rdt) {
-    (window as unknown as { rdt: (a: string, b: string, c: object) => void }).rdt("track", "AddToCart", {
-      conversionId,
-      value: parseFloat(price.replace("$", "")),
-      currency: "USD",
-      itemCount: 1,
-      products: [{ id: planName.toLowerCase(), name: planName, category: "Shopify Support" }],
-    });
-  }
-}
-
 export default function Pricing() {
-  const router = useRouter();
-
   return (
-    <>
-      <section id="pricing" className="py-20 lg:py-28 bg-white">
+    <section id="partnership" className="py-20 lg:py-28 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14 lg:mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-[#fff7ed] text-[#f97316] text-xs font-bold uppercase tracking-widest mb-4">
-            Pricing
+            Creators &amp; brands
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#171717] tracking-tight mb-4">
-            Transparent Pricing.
+            No flat-rate checkout.
             <br />
-            <span className="text-[#f97316]">No Surprises.</span>
+            <span className="text-[#f97316]">Negotiate what fits you.</span>
           </h2>
-          <p className="text-lg text-gray-500 max-w-xl mx-auto">
-            Flat-rate fixes. You know exactly what you pay before we start.
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            We retired fixed packages on the site. If you&apos;re a creator or brand, we&apos;ll scope support together — including{" "}
+            <strong className="text-[#171717] font-semibold">per-click</strong> or other performance-aligned terms — so economics match your campaigns and traffic.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          {plans.map((plan) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+          {partnershipPoints.map((item) => (
             <div
-              key={plan.name}
-              className={`relative rounded-2xl flex flex-col ${
-                plan.featured
-                  ? "bg-[#171717] text-white shadow-2xl shadow-navy/20 ring-4 ring-[#f97316]/30 md:scale-105"
-                  : "bg-[#fff7ed] text-[#171717]"
-              }`}
+              key={item.title}
+              className="rounded-2xl bg-[#fff7ed] border border-[#fed7aa] p-8 flex flex-col"
             >
-              {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-[#f97316] text-white text-xs font-bold uppercase tracking-widest shadow-lg">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
-              <div className="p-8 flex flex-col flex-1">
-                <div className="mb-6">
-                  <h3 className={`text-lg font-bold mb-1 ${plan.featured ? "text-white" : "text-[#171717]"}`}>
-                    {plan.name}
-                  </h3>
-                  <div className="flex items-end gap-1 mb-3">
-                    <span className={`text-5xl font-black tracking-tight ${plan.featured ? "text-white" : "text-[#171717]"}`}>
-                      {plan.price}
-                    </span>
-                    <span className={`text-sm mb-2 ${plan.featured ? "text-white/60" : "text-gray-500"}`}>
-                      / fix
-                    </span>
-                  </div>
-                  <p className={`text-sm leading-relaxed ${plan.featured ? "text-white/70" : "text-gray-500"}`}>
-                    {plan.description}
-                  </p>
-                </div>
-
-                <ul className="flex-1 space-y-3 mb-8">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2.5">
-                      <svg
-                        className={`w-4 h-4 mt-0.5 shrink-0 ${plan.featured ? "text-[#fb923c]" : "text-[#f97316]"}`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className={`text-sm ${plan.featured ? "text-white/80" : "text-gray-600"}`}>
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  onClick={() => {
-                    trackAddToCart(plan.name, plan.price);
-                    router.push(`/order?plan=${plan.plan}`);
-                  }}
-                  className={`w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-bold text-sm transition-colors ${
-                    plan.featured
-                      ? "bg-[#f97316] text-white hover:bg-[#ea580c]"
-                      : "bg-[#171717] text-white hover:bg-[#262626]"
-                  }`}
-                >
-                  {plan.cta}
-                </button>
+              <div className="w-12 h-12 rounded-xl bg-[#171717] text-white flex items-center justify-center mb-5">
+                {item.icon}
               </div>
+              <h3 className="text-lg font-bold text-[#171717] mb-2">{item.title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed flex-1">{item.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Trust badges */}
+        <div className="rounded-2xl bg-[#171717] px-8 py-10 text-center">
+          <p className="text-white font-bold text-lg mb-2">Ready to talk numbers?</p>
+          <p className="text-white/60 text-sm max-w-xl mx-auto mb-6">
+            Tell us who you are, your store or audience size, and what you&apos;re trying to achieve. We&apos;ll follow up to discuss CPC, bundles, or hybrid models — whatever aligns with both sides.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <Link
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-sm hover:bg-[#ea580c] transition-colors w-full sm:w-auto"
+            >
+              Start a partnership conversation
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+            <a
+              href="https://wa.me/15127967462"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl border-2 border-white/25 text-white font-bold text-sm hover:bg-white/10 transition-colors w-full sm:w-auto"
+            >
+              WhatsApp us
+            </a>
+          </div>
+        </div>
+
         <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
           {[
             {
@@ -167,7 +103,7 @@ export default function Pricing() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               ),
-              label: "Shopify Partner Certified",
+              label: "Shopify Partner certified",
             },
             {
               icon: (
@@ -175,15 +111,7 @@ export default function Pricing() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               ),
-              label: "SSL Secure",
-            },
-            {
-              icon: (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              ),
-              label: "30-Day Fix Guarantee",
+              label: "SSL secure collaboration",
             },
             {
               icon: (
@@ -191,7 +119,7 @@ export default function Pricing() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               ),
-              label: "2,000+ Stores Fixed",
+              label: "2,000+ stores supported",
             },
           ].map((badge) => (
             <div key={badge.label} className="flex items-center gap-2 text-gray-400 text-sm">
@@ -202,7 +130,5 @@ export default function Pricing() {
         </div>
       </div>
     </section>
-    </>
   );
 }
-

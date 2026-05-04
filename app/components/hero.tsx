@@ -56,10 +56,10 @@ export default function Hero() {
                 </svg>
               </Link>
               <Link
-                href="#pricing"
+                href="#partnership"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border-2 border-white/30 text-white font-bold text-base hover:border-white/60 hover:bg-white/5 transition-colors"
               >
-                See Pricing
+                Partnership
               </Link>
             </div>
 

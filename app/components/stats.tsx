@@ -11,7 +11,7 @@ const highlights = [
   "We fix it or you don't pay",
   "Worked on 2,000+ live stores",
   "Available 24 hours, 7 days a week",
-  "Transparent pricing, no hidden fees",
+  "Custom partnerships — negotiate CPC & performance terms",
 ];
 
 export default function Stats() {

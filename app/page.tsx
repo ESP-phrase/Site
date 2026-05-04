@@ -47,32 +47,17 @@ const jsonLd = {
       description:
         "Expert Shopify fix service for checkout errors, theme bugs, app conflicts, and payment failures. Diagnosed and resolved in hours, not days.",
       areaServed: "Worldwide",
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Shopify Fix Plans",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            name: "Basic Fix",
-            price: "35",
-            priceCurrency: "USD",
-            description: "1 issue diagnosed and fixed. Response within 4 hours.",
-          },
-          {
-            "@type": "Offer",
-            name: "Priority",
-            price: "175",
-            priceCurrency: "USD",
-            description: "Up to 3 issues fixed. Response within 2 hours.",
-          },
-          {
-            "@type": "Offer",
-            name: "Unlimited",
-            price: "299",
-            priceCurrency: "USD",
-            description: "Unlimited fixes per month. Response within 30 minutes. Flat monthly rate.",
-          },
-        ],
+      offers: {
+        "@type": "Offer",
+        name: "Creator & brand partnerships",
+        description:
+          "Custom commercial terms negotiated per partner — including per-click and performance-aligned models. No flat-rate packages sold on-site; contact TaskDudes to scope support.",
+        availability: "https://schema.org/InStock",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "USD",
+          description: "Terms negotiated individually (e.g. per-click, hybrid, or performance-based).",
+        },
       },
     },
     {
@@ -83,7 +68,7 @@ const jsonLd = {
           name: "How fast will you fix my Shopify store?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Response times depend on your plan: Basic Fix within 4 hours, Priority within 2 hours, and Emergency within 30 minutes.",
+            text: "Response times depend on what we agree in your partnership — most inbound requests get an expert reply within about two hours; urgent scopes can be prioritized when negotiated upfront.",
           },
         },
         {
@@ -107,7 +92,7 @@ const jsonLd = {
           name: "How do I get started?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Choose a plan on our pricing section, describe your problem, and proceed to payment. A Shopify expert will contact you within the response time for your plan.",
+            text: "Use the contact form or WhatsApp to describe your store and goals. We'll discuss partnership terms — including per-click or other structures — then assign an expert and confirm timelines before any work begins.",
           },
         },
       ],
