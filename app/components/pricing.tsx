@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import CheckoutModal from "./checkout-modal";
+import { useRouter } from "next/navigation";
 
 const plans = [
   {
@@ -54,14 +53,10 @@ const plans = [
 ];
 
 export default function Pricing() {
-  const [selectedPlan, setSelectedPlan] = useState<{ name: string; price: string; planKey: string } | null>(null);
+  const router = useRouter();
 
   return (
     <>
-      <CheckoutModal
-        plan={selectedPlan}
-        onClose={() => setSelectedPlan(null)}
-      />
       <section id="pricing" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -133,7 +128,7 @@ export default function Pricing() {
                 </ul>
 
                 <button
-                  onClick={() => setSelectedPlan({ name: plan.name, price: plan.price, planKey: plan.plan })}
+                  onClick={() => router.push(`/order?plan=${plan.plan}`)}
                   className={`w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-bold text-sm transition-colors ${
                     plan.featured
                       ? "bg-[#f97316] text-white hover:bg-[#ea580c]"
@@ -194,3 +189,4 @@ export default function Pricing() {
     </>
   );
 }
+
