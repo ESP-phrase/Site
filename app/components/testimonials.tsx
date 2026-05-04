@@ -44,13 +44,13 @@ function StarRating({ count }: { count: number }) {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-[#f0f4ff]">
+    <section id="testimonials" className="py-20 lg:py-28 bg-[#fff7ed]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 rounded-full bg-white text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-white text-[#f97316] text-xs font-bold uppercase tracking-widest mb-4">
             Testimonials
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#09090f] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#171717] tracking-tight mb-4">
             What Shopify Store Owners Say
           </h2>
           <p className="text-lg text-gray-500 max-w-xl mx-auto">
@@ -62,13 +62,13 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className={`bg-white rounded-2xl p-8 shadow-sm border border-[#e0e9ff] flex flex-col ${
+              className={`bg-white rounded-2xl p-8 shadow-sm border border-[#fed7aa] flex flex-col ${
                 i === 1 ? "md:mt-8" : i === 2 ? "md:mt-4" : ""
               }`}
             >
               <div className="flex items-center justify-between mb-4">
                 <StarRating count={t.rating} />
-                <span className="text-xs font-semibold text-[#2563eb] bg-[#f0f4ff] px-2.5 py-1 rounded-full">
+                <span className="text-xs font-semibold text-[#f97316] bg-[#fff7ed] px-2.5 py-1 rounded-full">
                   {t.tag}
                 </span>
               </div>
@@ -78,7 +78,7 @@ export default function Testimonials() {
               </blockquote>
 
               <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                <div className="w-11 h-11 rounded-full overflow-hidden shrink-0 bg-[#09090f]">
+                <div className="w-11 h-11 rounded-full overflow-hidden shrink-0 bg-[#171717]">
                   <Image
                     src={t.avatar}
                     alt={t.name}
@@ -88,7 +88,7 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-[#09090f]">{t.name}</div>
+                  <div className="text-sm font-bold text-[#171717]">{t.name}</div>
                   <div className="text-xs text-gray-500">{t.role}</div>
                 </div>
               </div>

@@ -63,31 +63,31 @@ export default function Newsletter() {
   }
 
   return (
-    <section className="relative bg-[#04040a] overflow-hidden py-20 lg:py-28">
+    <section className="relative bg-[#0f0f0f] overflow-hidden py-20 lg:py-28">
       {/* Background grid */}
       <div
         className="absolute inset-0 opacity-[0.06]"
         style={{
-          backgroundImage: "radial-gradient(circle, #38bdf8 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, #fb923c 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
       />
       {/* Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#2563eb] opacity-10 blur-[80px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#f97316] opacity-10 blur-[80px] pointer-events-none rounded-full" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left */}
           <div>
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2563eb]/20 border border-[#2563eb]/30 text-[#38bdf8] text-xs font-bold uppercase tracking-widest mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f97316]/20 border border-[#f97316]/30 text-[#fb923c] text-xs font-bold uppercase tracking-widest mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#fb923c] animate-pulse" />
               Free — No Spam Ever
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-5">
               Stay One Step Ahead
               <br />
-              <span className="text-[#38bdf8]">of Shopify Disasters.</span>
+              <span className="text-[#fb923c]">of Shopify Disasters.</span>
             </h2>
             <p className="text-white/60 text-lg leading-relaxed mb-8">
               Join 1,200+ store owners who get our weekly tips, emergency alerts, and priority access — straight to their inbox.
@@ -96,7 +96,7 @@ export default function Newsletter() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {perks.map((perk) => (
                 <div key={perk.title} className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-[#2563eb]/20 border border-[#2563eb]/20 flex items-center justify-center text-[#38bdf8] shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-[#f97316]/20 border border-[#f97316]/20 flex items-center justify-center text-[#fb923c] shrink-0">
                     {perk.icon}
                   </div>
                   <div>
@@ -135,7 +135,7 @@ export default function Newsletter() {
                     placeholder="you@yourstore.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/15 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#38bdf8] focus:bg-white/15 transition"
+                    className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/15 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#fb923c] focus:bg-white/15 transition"
                   />
                 </div>
 
@@ -146,7 +146,7 @@ export default function Newsletter() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full py-4 rounded-xl bg-[#2563eb] text-white font-black text-sm hover:bg-[#1d4ed8] transition-colors disabled:opacity-60 shadow-lg shadow-blue-500/30"
+                  className="w-full py-4 rounded-xl bg-[#f97316] text-white font-black text-sm hover:bg-[#ea580c] transition-colors disabled:opacity-60 shadow-lg shadow-blue-500/30"
                 >
                   {status === "loading" ? "Joining..." : "Join 1,200+ Store Owners →"}
                 </button>
@@ -154,7 +154,7 @@ export default function Newsletter() {
                 <div className="flex items-center justify-center gap-4 pt-2">
                   {["No spam", "Free forever", "Unsubscribe anytime"].map((t) => (
                     <span key={t} className="flex items-center gap-1 text-white/30 text-xs">
-                      <svg className="w-3 h-3 text-[#38bdf8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3 h-3 text-[#fb923c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                       {t}

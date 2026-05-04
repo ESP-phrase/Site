@@ -86,13 +86,13 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div>
-            <span className="inline-block px-3 py-1 rounded-full bg-[#f0f4ff] text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-6">
+            <span className="inline-block px-3 py-1 rounded-full bg-[#fff7ed] text-[#f97316] text-xs font-bold uppercase tracking-widest mb-6">
               Get Help
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#09090f] tracking-tight mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#171717] tracking-tight mb-6 leading-tight">
               Store Down?
               <br />
-              <span className="text-[#2563eb]">Let&apos;s Fix It Now.</span>
+              <span className="text-[#f97316]">Let&apos;s Fix It Now.</span>
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed mb-8">
               Fill out the form and a Shopify expert will reach out to you within minutes.
@@ -127,7 +127,7 @@ export default function ContactForm() {
                 },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-[#09090f] text-white flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-[#171717] text-white flex items-center justify-center shrink-0">
                     {item.icon}
                   </div>
                   <span className="text-sm text-gray-600">{item.text}</span>
@@ -136,15 +136,15 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div className="bg-[#f0f4ff] rounded-2xl p-5 sm:p-8 border border-[#e0e9ff]">
+          <div className="bg-[#fff7ed] rounded-2xl p-5 sm:p-8 border border-[#fed7aa]">
             {submitted ? (
               <div className="text-center py-10">
-                <div className="w-16 h-16 rounded-full bg-[#09090f] flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-[#171717] flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-black text-[#09090f] mb-2">Request Received!</h3>
+                <h3 className="text-xl font-black text-[#171717] mb-2">Request Received!</h3>
                 <p className="text-gray-500 text-sm">
                   A Shopify expert will be in touch within the hour. Check your inbox.
                 </p>
@@ -153,7 +153,7 @@ export default function ContactForm() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[#171717] uppercase tracking-wider mb-1.5">
                       Your Name
                     </label>
                     <input
@@ -162,11 +162,11 @@ export default function ContactForm() {
                       placeholder="Jane Smith"
                       value={form.name}
                       onChange={(e) => update("name", e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-base sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#fed7aa] text-base sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f97316]/30 focus:border-[#f97316] transition"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[#171717] uppercase tracking-wider mb-1.5">
                       Email
                     </label>
                     <input
@@ -175,13 +175,13 @@ export default function ContactForm() {
                       placeholder="jane@mystore.com"
                       value={form.email}
                       onChange={(e) => update("email", e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-base sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#fed7aa] text-base sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f97316]/30 focus:border-[#f97316] transition"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#171717] uppercase tracking-wider mb-1.5">
                     Store URL
                   </label>
                   <input
@@ -190,19 +190,19 @@ export default function ContactForm() {
                     placeholder="https://mystore.myshopify.com"
                     value={form.storeUrl}
                     onChange={(e) => update("storeUrl", e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-base sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#fed7aa] text-base sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f97316]/30 focus:border-[#f97316] transition"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#171717] uppercase tracking-wider mb-1.5">
                     Issue Type
                   </label>
                   <select
                     required
                     value={form.issueType}
                     onChange={(e) => update("issueType", e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-base sm:text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#fed7aa] text-base sm:text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#f97316]/30 focus:border-[#f97316] transition"
                   >
                     <option value="">Select an issue type</option>
                     <option>Checkout Error</option>
@@ -216,7 +216,7 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#09090f] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#171717] uppercase tracking-wider mb-1.5">
                     Describe the Problem
                   </label>
                   <textarea
@@ -225,12 +225,12 @@ export default function ContactForm() {
                     placeholder="Tell us exactly what's broken, any error messages you're seeing, and when it started..."
                     value={form.description}
                     onChange={(e) => update("description", e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e0e9ff] text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#fed7aa] text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f97316]/30 focus:border-[#f97316] transition resize-none"
                   />
                 </div>
 
                 {/* Response time estimator */}
-                <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#e0e9ff]">
+                <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#fed7aa]">
                   <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
                   <span className="text-xs text-gray-500 font-medium">{waitMsg}</span>
                 </div>
@@ -247,7 +247,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-4 px-6 rounded-xl bg-[#09090f] text-white font-bold text-sm hover:bg-[#131320] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+                  className="w-full py-4 px-6 rounded-xl bg-[#171717] text-white font-bold text-sm hover:bg-[#262626] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>

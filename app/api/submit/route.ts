@@ -23,28 +23,28 @@ export async function POST(req: NextRequest) {
       subject: `[TaskDudes] New Fix Request — ${issueType} from ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
-          <div style="background: #09090f; padding: 24px; border-radius: 12px 12px 0 0;">
+          <div style="background: #171717; padding: 24px; border-radius: 12px 12px 0 0;">
             <h1 style="color: white; margin: 0; font-size: 22px;">New Fix Request</h1>
             <p style="color: rgba(255,255,255,0.6); margin: 4px 0 0; font-size: 14px;">TaskDudes — Shopify Support</p>
           </div>
-          <div style="background: #f0f4ff; padding: 24px; border-radius: 0 0 12px 12px; border: 1px solid #e0e9ff; border-top: none;">
+          <div style="background: #fff7ed; padding: 24px; border-radius: 0 0 12px 12px; border: 1px solid #fed7aa; border-top: none;">
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #e0e9ff; color: #64748b; font-size: 13px; width: 140px;">Name</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #e0e9ff; color: #0a0a0a; font-size: 14px; font-weight: 600;">${name}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #fed7aa; color: #64748b; font-size: 13px; width: 140px;">Name</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #fed7aa; color: #0a0a0a; font-size: 14px; font-weight: 600;">${name}</td>
               </tr>
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #e0e9ff; color: #64748b; font-size: 13px;">Email</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #e0e9ff; color: #0a0a0a; font-size: 14px; font-weight: 600;"><a href="mailto:${email}" style="color: #2563eb;">${email}</a></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #fed7aa; color: #64748b; font-size: 13px;">Email</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #fed7aa; color: #0a0a0a; font-size: 14px; font-weight: 600;"><a href="mailto:${email}" style="color: #f97316;">${email}</a></td>
               </tr>
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #e0e9ff; color: #64748b; font-size: 13px;">Store URL</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #e0e9ff; color: #0a0a0a; font-size: 14px; font-weight: 600;"><a href="${storeUrl}" style="color: #2563eb;">${storeUrl}</a></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #fed7aa; color: #64748b; font-size: 13px;">Store URL</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #fed7aa; color: #0a0a0a; font-size: 14px; font-weight: 600;"><a href="${storeUrl}" style="color: #f97316;">${storeUrl}</a></td>
               </tr>
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #e0e9ff; color: #64748b; font-size: 13px;">Issue Type</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #e0e9ff;">
-                  <span style="background: #2563eb; color: white; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;">${issueType}</span>
+                <td style="padding: 10px 0; border-bottom: 1px solid #fed7aa; color: #64748b; font-size: 13px;">Issue Type</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #fed7aa;">
+                  <span style="background: #f97316; color: white; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;">${issueType}</span>
                 </td>
               </tr>
               <tr>
@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
               </tr>
             </table>
             <div style="margin-top: 24px;">
-              <a href="mailto:${email}" style="display: inline-block; background: #09090f; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">Reply to ${name}</a>
+              <a href="mailto:${email}" style="display: inline-block; background: #171717; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">Reply to ${name}</a>
             </div>
           </div>
         </div>

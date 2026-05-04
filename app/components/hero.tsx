@@ -10,7 +10,7 @@ const badges = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#09090f] h-screen flex items-center overflow-hidden">
+    <section className="relative bg-[#171717] h-screen flex items-center overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
@@ -18,9 +18,9 @@ export default function Hero() {
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-4">
               Your Shopify Store{" "}
-              <span className="text-[#38bdf8]">Broke?</span>
+              <span className="text-[#fb923c]">Broke?</span>
               <br />
-              We Fix It <span className="text-[#38bdf8]">Fast.</span>
+              We Fix It <span className="text-[#fb923c]">Fast.</span>
             </h1>
 
             <p className="text-base sm:text-lg text-white/70 max-w-xl mb-5 leading-relaxed">
@@ -37,7 +37,7 @@ export default function Hero() {
                     key={issue}
                     href="#contact"
                     onClick={() => sessionStorage.setItem("selectedIssue", issue)}
-                    className="px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-medium hover:bg-[#2563eb] hover:border-[#2563eb] hover:text-white transition-colors"
+                    className="px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-medium hover:bg-[#f97316] hover:border-[#f97316] hover:text-white transition-colors"
                   >
                     {issue}
                   </a>
@@ -48,7 +48,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#2563eb] text-white font-bold text-base hover:bg-[#1d4ed8] transition-colors shadow-lg shadow-blue-500/30"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-base hover:bg-[#ea580c] transition-colors shadow-lg shadow-blue-500/30"
               >
                 Get Help Now
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,7 +136,7 @@ export default function Hero() {
 
               {/* Floating expert card */}
               <div className="absolute -bottom-5 -left-4 z-20 flex items-center gap-3 px-4 py-3 rounded-2xl bg-[#1e3a5f] border border-white/10 shadow-xl">
-                <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 bg-[#2563eb]">
+                <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 bg-[#f97316]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="https://i.pravatar.cc/100?img=11"

@@ -66,13 +66,13 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
       {/* Modal */}
       <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden">
         {/* Header */}
-        <div className="bg-[#09090f] px-6 py-5 flex items-center justify-between">
+        <div className="bg-[#171717] px-6 py-5 flex items-center justify-between">
           <div>
             <p className="text-white/60 text-xs uppercase tracking-widest font-semibold mb-0.5">
               Selected Plan
             </p>
             <h2 className="text-white font-black text-xl">
-              {plan.name} — <span className="text-[#38bdf8]">{plan.price}</span>
+              {plan.name} — <span className="text-[#fb923c]">{plan.price}</span>
             </h2>
           </div>
           <button
@@ -93,7 +93,7 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-bold text-[#09090f] mb-1.5 uppercase tracking-wide">
+              <label className="block text-xs font-bold text-[#171717] mb-1.5 uppercase tracking-wide">
                 Your Name
               </label>
               <input
@@ -102,11 +102,11 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
                 placeholder="Jane Smith"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 transition"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/10 transition"
               />
             </div>
             <div>
-              <label className="block text-xs font-bold text-[#09090f] mb-1.5 uppercase tracking-wide">
+              <label className="block text-xs font-bold text-[#171717] mb-1.5 uppercase tracking-wide">
                 Email
               </label>
               <input
@@ -115,13 +115,13 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
                 placeholder="jane@store.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 transition"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/10 transition"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-[#09090f] mb-1.5 uppercase tracking-wide">
+            <label className="block text-xs font-bold text-[#171717] mb-1.5 uppercase tracking-wide">
               Store URL
             </label>
             <input
@@ -130,12 +130,12 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
               placeholder="https://yourstore.myshopify.com"
               value={storeUrl}
               onChange={(e) => setStoreUrl(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 transition"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/10 transition"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-[#09090f] mb-1.5 uppercase tracking-wide">
+            <label className="block text-xs font-bold text-[#171717] mb-1.5 uppercase tracking-wide">
               Describe the Problem
             </label>
             <textarea
@@ -144,7 +144,7 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
               placeholder="e.g. Checkout page shows a blank screen after adding items to cart. Started happening after installing the XYZ app yesterday..."
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 transition resize-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/10 transition resize-none"
             />
           </div>
 
@@ -157,7 +157,7 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 rounded-xl bg-[#2563eb] text-white font-bold text-sm hover:bg-[#1d4ed8] transition-colors disabled:opacity-70 flex items-center justify-center gap-2"
+            className="w-full py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-sm hover:bg-[#ea580c] transition-colors disabled:opacity-70 flex items-center justify-center gap-2"
           >
             {loading ? (
               <>

@@ -66,13 +66,13 @@ export default function Services() {
     <section id="services" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#f0f4ff] text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-[#fff7ed] text-[#f97316] text-xs font-bold uppercase tracking-widest mb-4">
             What We Fix
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#09090f] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#171717] tracking-tight mb-4">
             Everything You Need When
             <br />
-            <span className="text-[#2563eb]">Shopify Breaks</span>
+            <span className="text-[#f97316]">Shopify Breaks</span>
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             From minor glitches to full store outages — our team has seen it all and fixed it all.
@@ -83,12 +83,12 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group p-6 rounded-2xl bg-[#f0f4ff] border border-transparent hover:border-[#2563eb]/20 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-200"
+              className="group p-6 rounded-2xl bg-[#fff7ed] border border-transparent hover:border-[#f97316]/20 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-200"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#09090f] text-white flex items-center justify-center mb-4 group-hover:bg-[#2563eb] transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-[#171717] text-white flex items-center justify-center mb-4 group-hover:bg-[#f97316] transition-colors">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-bold text-[#09090f] mb-2">{service.title}</h3>
+              <h3 className="text-lg font-bold text-[#171717] mb-2">{service.title}</h3>
               <p className="text-sm text-gray-600 leading-relaxed">{service.description}</p>
             </div>
           ))}

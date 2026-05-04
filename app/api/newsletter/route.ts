@@ -33,12 +33,12 @@ export async function POST(req: NextRequest) {
       subject: `[TaskDudes] New Newsletter Signup — ${email}`,
       html: `
         <div style="font-family: sans-serif; max-width: 500px; margin: 0 auto; padding: 24px;">
-          <div style="background: #09090f; padding: 20px 24px; border-radius: 12px 12px 0 0;">
+          <div style="background: #171717; padding: 20px 24px; border-radius: 12px 12px 0 0;">
             <h2 style="color: white; margin: 0; font-size: 18px;">New Newsletter Signup</h2>
           </div>
-          <div style="background: #f0f4ff; padding: 20px 24px; border-radius: 0 0 12px 12px; border: 1px solid #e0e9ff; border-top: none;">
+          <div style="background: #fff7ed; padding: 20px 24px; border-radius: 0 0 12px 12px; border: 1px solid #fed7aa; border-top: none;">
             <p style="margin: 0; font-size: 14px; color: #0a0a0a;">
-              <strong>Email:</strong> <a href="mailto:${email}" style="color: #2563eb;">${email}</a>
+              <strong>Email:</strong> <a href="mailto:${email}" style="color: #f97316;">${email}</a>
             </p>
           </div>
         </div>

@@ -32,7 +32,7 @@ const points = [
 
 export default function Guarantee() {
   return (
-    <section className="py-16 bg-[#09090f]">
+    <section className="py-16 bg-[#171717]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
@@ -41,7 +41,7 @@ export default function Guarantee() {
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
               We Fix It Or You{" "}
-              <span className="text-[#38bdf8]">Don&apos;t Pay.</span>
+              <span className="text-[#fb923c]">Don&apos;t Pay.</span>
               <br />Period.
             </h2>
             <p className="text-white/60 text-lg leading-relaxed mb-8">
@@ -49,7 +49,7 @@ export default function Guarantee() {
             </p>
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#2563eb] text-white font-bold text-sm hover:bg-[#1d4ed8] transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#f97316] text-white font-bold text-sm hover:bg-[#ea580c] transition-colors"
             >
               Get Help Risk-Free
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,7 +61,7 @@ export default function Guarantee() {
           <div className="lg:w-1/2 w-full space-y-4">
             {points.map((point) => (
               <div key={point.title} className="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-xl bg-[#2563eb]/20 text-[#38bdf8] flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#f97316]/20 text-[#fb923c] flex items-center justify-center shrink-0">
                   {point.icon}
                 </div>
                 <div>

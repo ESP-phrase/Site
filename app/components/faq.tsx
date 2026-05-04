@@ -36,10 +36,10 @@ export default function Faq() {
     <section id="faq" className="py-20 lg:py-28 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#f0f4ff] text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-[#fff7ed] text-[#f97316] text-xs font-bold uppercase tracking-widest mb-4">
             FAQ
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#09090f] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#171717] tracking-tight mb-4">
             Common Questions
           </h2>
           <p className="text-gray-500 text-lg">Everything you need to know before reaching out.</p>
@@ -49,15 +49,15 @@ export default function Faq() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border border-[#e0e9ff] rounded-2xl overflow-hidden"
+              className="border border-[#fed7aa] rounded-2xl overflow-hidden"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-[#f0f4ff] transition-colors"
+                className="w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-[#fff7ed] transition-colors"
               >
-                <span className="flex-1 min-w-0 font-bold text-[#09090f] text-sm pr-4 text-left">{faq.q}</span>
+                <span className="flex-1 min-w-0 font-bold text-[#171717] text-sm pr-4 text-left">{faq.q}</span>
                 <svg
-                  className={`w-5 h-5 text-[#2563eb] shrink-0 transition-transform duration-200 ${open === i ? "rotate-180" : ""}`}
+                  className={`w-5 h-5 text-[#f97316] shrink-0 transition-transform duration-200 ${open === i ? "rotate-180" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -66,7 +66,7 @@ export default function Faq() {
                 </svg>
               </button>
               {open === i && (
-                <div className="px-6 pb-5 bg-[#f0f4ff] border-t border-[#e0e9ff]">
+                <div className="px-6 pb-5 bg-[#fff7ed] border-t border-[#fed7aa]">
                   <p className="text-gray-600 text-sm leading-relaxed pt-4">{faq.a}</p>
                 </div>
               )}
