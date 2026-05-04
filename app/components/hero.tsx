@@ -134,24 +134,6 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating expert card */}
-              <div className="absolute -bottom-5 -left-4 z-20 flex items-center gap-3 px-4 py-3 rounded-2xl bg-[#262626] border border-white/10 shadow-xl">
-                <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 bg-[#f97316]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="https://i.pravatar.cc/100?img=11"
-                    alt="Alex"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <div className="text-white text-sm font-bold">Alex — Shopify Expert</div>
-                  <div className="flex items-center gap-1.5 mt-0.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-green-400 text-xs">Diagnosing your issue...</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
