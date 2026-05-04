@@ -46,14 +46,22 @@ function OrderForm() {
     e.preventDefault();
     setError("");
     setLoading(true);
+
+    const conversionId = `checkout-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan: planKey, name, email, storeUrl, description }),
+        body: JSON.stringify({ plan: planKey, name, email, storeUrl, description, conversionId }),
       });
       const data = await res.json();
       if (data.url) {
+        // Fire Reddit pixel Lead event before redirecting
+        if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).rdt) {
+          (window as unknown as { rdt: (a: string, b: string, c: Record<string, string>) => void })
+            .rdt("track", "Lead", { conversionId });
+        }
         window.location.href = data.url;
       } else {
         setError(data.error || "Something went wrong. Please try again.");
