@@ -24,8 +24,8 @@ export default function Hero() {
             </h1>
 
             <p className="text-base sm:text-lg text-white/70 max-w-xl mb-5 leading-relaxed">
-              Checkout errors, theme bugs, app conflicts, payment failures — our Shopify experts diagnose
-              and resolve your issues in hours, not days. No downtime. No headaches.
+              Checkout errors, theme bugs, app conflicts, payment failures — our eCommerce experts diagnose
+              and resolve your issues in hours, not days. Shopify, WooCommerce, BigCommerce, and more.
             </p>
 
             {/* Quick issue selector */}

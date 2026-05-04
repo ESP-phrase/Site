@@ -93,6 +93,24 @@ export default function Services() {
             </div>
           ))}
         </div>
+
+        {/* Platform strip */}
+        <div className="mt-14 rounded-2xl bg-[#171717] px-8 py-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-0 justify-between">
+          <div className="text-center sm:text-left">
+            <p className="text-white font-bold text-sm mb-0.5">Not just Shopify.</p>
+            <p className="text-white/50 text-xs">We fix any eCommerce platform your store runs on.</p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {["Shopify", "WooCommerce", "BigCommerce", "Magento", "Wix", "Squarespace", "Custom Stores"].map((p) => (
+              <span
+                key={p}
+                className="px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-white/70 text-xs font-medium hover:bg-[#f97316]/20 hover:border-[#f97316]/30 hover:text-[#fb923c] transition-colors"
+              >
+                {p}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

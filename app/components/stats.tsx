@@ -25,11 +25,11 @@ export default function Stats() {
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6 leading-tight">
               We Live &amp; Breathe{" "}
-              <span className="text-[#fb923c]">Shopify</span>
+              <span className="text-[#fb923c]">eCommerce</span>
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-8">
-              Since 2016, we&apos;ve been the behind-the-scenes team powering hundreds of Shopify stores.
-              Every developer, designer, and marketer is vetted specifically for eCommerce — no generalists, ever.
+              Since 2016, we&apos;ve been the behind-the-scenes team fixing and powering online stores across every major platform —
+              Shopify, WooCommerce, BigCommerce, Magento, and beyond. Every expert is vetted specifically for eCommerce — no generalists, ever.
             </p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {highlights.map((item) => (
