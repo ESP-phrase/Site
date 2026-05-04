@@ -65,10 +65,10 @@ const jsonLd = {
           },
           {
             "@type": "Offer",
-            name: "Lifetime",
+            name: "Unlimited",
             price: "299",
             priceCurrency: "USD",
-            description: "Unlimited issues forever. Response within 30 minutes. Lifetime guarantee.",
+            description: "Unlimited fixes per month. Response within 30 minutes. Flat monthly rate.",
           },
         ],
       },

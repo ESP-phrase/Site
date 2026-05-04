@@ -18,10 +18,10 @@ const planDetails: Record<string, { name: string; price: string; features: strin
     features: ["Up to 3 issues fixed", "Detailed fix report", "60-day fix guarantee", "Priority chat support", "Follow-up check included"],
   },
   lifetime: {
-    name: "Lifetime",
-    price: "$299",
+    name: "Unlimited",
+    price: "$299/mo",
     response: "Response within 30 minutes",
-    features: ["Unlimited issues, forever", "Full audit + fix report", "Lifetime fix guarantee", "Dedicated Slack channel", "Priority 24/7 support"],
+    features: ["Unlimited fixes per month", "Full audit + fix report", "90-day fix guarantee", "Dedicated Slack channel", "Priority 24/7 support"],
   },
 };
 
