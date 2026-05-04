@@ -18,7 +18,7 @@ export default function Hero() {
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-4">
               Shopify Problem?{" "}
-              <span className="text-[#fb923c]">Stop Losing Sales.</span>
+              <span className="text-[#fb923c]">Stop Losing Conversions.</span>
               <br />
               We Fix It <span className="text-[#fb923c]">In Hours.</span>
             </h1>
