@@ -52,6 +52,19 @@ const plans = [
   },
 ];
 
+function trackAddToCart(planName: string, price: string) {
+  const conversionId = `atc-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).rdt) {
+    (window as unknown as { rdt: (a: string, b: string, c: object) => void }).rdt("track", "AddToCart", {
+      conversionId,
+      value: parseFloat(price.replace("$", "")),
+      currency: "USD",
+      itemCount: 1,
+      products: [{ id: planName.toLowerCase(), name: planName, category: "Shopify Support" }],
+    });
+  }
+}
+
 export default function Pricing() {
   const router = useRouter();
 
@@ -128,7 +141,10 @@ export default function Pricing() {
                 </ul>
 
                 <button
-                  onClick={() => router.push(`/order?plan=${plan.plan}`)}
+                  onClick={() => {
+                    trackAddToCart(plan.name, plan.price);
+                    router.push(`/order?plan=${plan.plan}`);
+                  }}
                   className={`w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-bold text-sm transition-colors ${
                     plan.featured
                       ? "bg-[#f97316] text-white hover:bg-[#ea580c]"
