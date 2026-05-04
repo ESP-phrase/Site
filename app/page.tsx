@@ -12,6 +12,7 @@ import Newsletter from "./components/newsletter";
 import Footer from "./components/footer";
 import WhatsAppButton from "./components/whatsapp-button";
 import CouponPopup from "./components/coupon-popup";
+import ScrollReveal from "./components/scroll-reveal";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -124,15 +125,15 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Newsletter />
-        <Services />
-        <HowItWorks />
-        <Pricing />
-        <Guarantee />
-        <Stats />
-        <Testimonials />
-        <Faq />
-        <ContactForm />
+        <ScrollReveal><Newsletter /></ScrollReveal>
+        <ScrollReveal><Services /></ScrollReveal>
+        <ScrollReveal><HowItWorks /></ScrollReveal>
+        <ScrollReveal><Pricing /></ScrollReveal>
+        <ScrollReveal><Guarantee /></ScrollReveal>
+        <ScrollReveal><Stats /></ScrollReveal>
+        <ScrollReveal><Testimonials /></ScrollReveal>
+        <ScrollReveal><Faq /></ScrollReveal>
+        <ScrollReveal><ContactForm /></ScrollReveal>
       </main>
       <Footer />
       <WhatsAppButton />
