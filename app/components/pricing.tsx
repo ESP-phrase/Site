@@ -35,20 +35,20 @@ const plans = [
     plan: "priority",
   },
   {
-    name: "Emergency",
+    name: "Lifetime",
     price: "$299",
-    description: "Store is completely down? This is the plan. Drop everything and fix it now.",
+    description: "One payment. Ongoing support forever. We're on call whenever your store needs us.",
     features: [
-      "Unlimited issue scope",
+      "Unlimited issues, forever",
       "Response within 30 minutes",
       "Full audit + fix report",
-      "90-day fix guarantee",
+      "Lifetime fix guarantee",
       "Dedicated Slack channel",
-      "Post-fix monitoring (7 days)",
+      "Priority 24/7 support",
     ],
-    cta: "Get Emergency Help",
+    cta: "Get Lifetime Access",
     featured: false,
-    plan: "emergency",
+    plan: "lifetime",
   },
 ];
 

@@ -17,11 +17,11 @@ const planDetails: Record<string, { name: string; price: string; features: strin
     response: "Response within 2 hours",
     features: ["Up to 3 issues fixed", "Detailed fix report", "60-day fix guarantee", "Priority chat support", "Follow-up check included"],
   },
-  emergency: {
-    name: "Emergency",
+  lifetime: {
+    name: "Lifetime",
     price: "$299",
     response: "Response within 30 minutes",
-    features: ["Unlimited issue scope", "Full audit + fix report", "90-day fix guarantee", "Dedicated Slack channel", "Post-fix monitoring (7 days)"],
+    features: ["Unlimited issues, forever", "Full audit + fix report", "Lifetime fix guarantee", "Dedicated Slack channel", "Priority 24/7 support"],
   },
 };
 

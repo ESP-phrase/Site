@@ -5,7 +5,7 @@ import { Resend } from "resend";
 const priceMap: Record<string, string> = {
   basic: process.env.STRIPE_PRICE_BASIC!,
   priority: process.env.STRIPE_PRICE_PRIORITY!,
-  emergency: process.env.STRIPE_PRICE_EMERGENCY!,
+  lifetime: process.env.STRIPE_PRICE_EMERGENCY!,
 };
 
 export async function POST(req: NextRequest) {
