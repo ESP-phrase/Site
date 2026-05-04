@@ -50,7 +50,7 @@ export default function Hero() {
                 href="#contact"
                 className="btn-glow inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-base transition-colors shadow-lg shadow-orange-500/30"
               >
-                Get Help Now
+                Get a Free Quote
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
