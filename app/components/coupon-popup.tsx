@@ -78,28 +78,39 @@ export default function CouponPopup() {
   if (!visible) return null;
 
   return (
-    <div
-      className="hidden sm:block fixed bottom-6 right-6 z-50 w-80 animate-in slide-in-from-bottom-4 duration-300"
-      style={{ animation: "slideUp 0.35s cubic-bezier(0.16,1,0.3,1) both" }}
-    >
-      <style>{`
+    <>
+      {/* Mobile: tap dimmed area to close instantly */}
+      <button
+        type="button"
+        aria-label="Close offer"
+        onClick={dismiss}
+        className="sm:hidden fixed inset-0 z-40 bg-black/55 backdrop-blur-[2px]"
+      />
+
+      <div
+        className="fixed z-50 left-4 right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] sm:left-auto sm:right-6 sm:bottom-6 w-auto sm:w-80 max-w-md mx-auto sm:mx-0"
+        style={{ animation: "slideUp 0.35s cubic-bezier(0.16,1,0.3,1) both" }}
+      >
+        <style>{`
         @keyframes slideUp {
           from { opacity: 0; transform: translateY(20px); }
           to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>
 
-      <div className="relative bg-[#171717] border border-white/10 rounded-2xl shadow-2xl shadow-black/40 overflow-hidden">
+        <div className="relative bg-[#171717] border border-white/10 rounded-2xl shadow-2xl shadow-black/40 overflow-hidden">
         {/* Top accent line */}
         <div className="h-1 w-full bg-gradient-to-r from-[#f97316] to-[#fb923c]" />
 
         <div className="p-5">
-          {/* Dismiss */}
+          {/* Dismiss — large tap target on mobile */}
           <button
+            type="button"
             onClick={dismiss}
-            className="absolute top-3 right-3 w-6 h-6 flex items-center justify-center rounded-full text-white/30 hover:text-white/70 transition"
+            className="absolute top-2 right-2 sm:top-3 sm:right-3 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 w-11 h-11 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-white/10 sm:bg-transparent text-white/80 hover:text-white hover:bg-white/20 sm:hover:bg-transparent transition"
+            aria-label="Close"
           >
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 sm:w-3.5 sm:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -163,7 +174,15 @@ export default function CouponPopup() {
                 </button>
               </form>
 
-              <p className="text-white/25 text-[10px] text-center mt-2">
+              <button
+                type="button"
+                onClick={dismiss}
+                className="w-full py-3 text-sm font-medium text-white/50 hover:text-white/80 active:text-white/90 sm:py-2"
+              >
+                No thanks
+              </button>
+
+              <p className="text-white/25 text-[10px] text-center mt-1">
                 No spam. Unsubscribe anytime.
               </p>
             </>
@@ -201,10 +220,19 @@ export default function CouponPopup() {
               >
                 View plans →
               </a>
+
+              <button
+                type="button"
+                onClick={dismiss}
+                className="w-full py-3 mt-2 text-sm font-medium text-white/50 hover:text-white/80 sm:py-2"
+              >
+                Close
+              </button>
             </>
           )}
         </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
