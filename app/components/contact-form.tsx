@@ -2,18 +2,11 @@
 
 import { useState, useEffect } from "react";
 
-const waitMessages = [
-  "Current wait: ~12 min",
-  "Experts available now",
-  "Current wait: ~18 min",
-  "2 experts online — fast response",
-];
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [waitMsg, setWaitMsg] = useState(waitMessages[0]);
   const [selectedIssue, setSelectedIssue] = useState("");
 
   const [form, setForm] = useState({
@@ -31,15 +24,6 @@ export default function ContactForm() {
       setSelectedIssue(stored);
       sessionStorage.removeItem("selectedIssue");
     }
-  }, []);
-
-  useEffect(() => {
-    const idx = Math.floor(Math.random() * waitMessages.length);
-    setWaitMsg(waitMessages[idx]);
-    const interval = setInterval(() => {
-      setWaitMsg(waitMessages[Math.floor(Math.random() * waitMessages.length)]);
-    }, 8000);
-    return () => clearInterval(interval);
   }, []);
 
   function update(field: string, value: string) {
@@ -227,12 +211,6 @@ export default function ContactForm() {
                     onChange={(e) => update("description", e.target.value)}
                     className="w-full px-4 py-3 rounded-xl bg-white border border-[#fed7aa] text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f97316]/30 focus:border-[#f97316] transition resize-none"
                   />
-                </div>
-
-                {/* Response time estimator */}
-                <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#fed7aa]">
-                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
-                  <span className="text-xs text-gray-500 font-medium">{waitMsg}</span>
                 </div>
 
                 {error && (
