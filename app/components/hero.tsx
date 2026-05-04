@@ -11,7 +11,7 @@ const badges = [
 export default function Hero() {
   return (
     <section className="relative bg-[#171717] h-screen flex items-center overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
           {/* Left — copy */}
@@ -48,7 +48,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Link
                 href="#contact"
-                className="btn-glow inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-base transition-colors shadow-lg shadow-orange-500/30"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#f97316] text-white font-bold text-base hover:bg-[#ea580c] transition-colors shadow-lg shadow-orange-500/30"
               >
                 Get Help Now
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export default function Hero() {
               </Link>
               <Link
                 href="#pricing"
-                className="btn-shimmer inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border-2 border-white/30 text-white font-bold text-base hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border-2 border-white/30 text-white font-bold text-base hover:border-white/60 hover:bg-white/5 transition-colors"
               >
                 See Pricing
               </Link>
@@ -78,7 +78,7 @@ export default function Hero() {
             <div className="relative w-full">
 
               {/* Floating fix badge */}
-              <div className="absolute -top-5 -right-2 z-20 flex items-center gap-2 px-4 py-2 rounded-2xl bg-[#f97316] shadow-xl shadow-orange-500/30">
+              <div className="absolute -top-5 -right-2 z-20 flex items-center gap-2 px-4 py-2 rounded-2xl bg-green-500 shadow-xl shadow-green-500/30 animate-bounce">
                 <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                 </svg>
